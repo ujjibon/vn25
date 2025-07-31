@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4th National Earth Fest | Viqarunnisa Noon Earth Club</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* Custom Styles for a more refined, professional feel */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* slate-50 */
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .gradient-hero {
+            background-image: linear-gradient(160deg, #00251a 0%, #004d40 100%);
+        }
+        /* Custom animation for scroll-triggered fade-in */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .observe {
+            opacity: 0;
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .observe.is-visible {
+            opacity: 1;
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+        /* Custom styles for the accordion toggle icon */
+        .accordion-header svg { transition: transform 0.3s ease-in-out; }
+        .accordion-item.active .accordion-header svg { transform: rotate(180deg); }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+    </style>
+</head>
+<body class="text-slate-700">
+
+    <!-- =================================================================
+         HEADER & NAVIGATION
+    ================================================================== -->
+    <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-xl border-b border-slate-200/80">
+    <div class="container mx-auto px-4">
+        <div class="flex items-center justify-between h-16">
+            <a href="#home" class="flex items-center gap-2 group">
+                <img src="logo.jpg" alt="Logo" class="h-10 w-10 transition-transform duration-300 group-hover:scale-110">
+                <span class="font-bold text-lg text-slate-900 hidden sm:block">VNEC</span>
+            </a>
+            <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600">
+                <a href="#about" class="hover:text-emerald-700 transition-colors">About</a>
+                <a href="#segments" class="hover:text-emerald-700 transition-colors">Segments</a>
+                <a href="#team" class="hover:text-emerald-700 transition-colors">Team</a>
+                <a href="#gallery" class="hover:text-emerald-700 transition-colors">Gallery</a>
+            </nav>
+            <a href="https://fb.me/e/2URTSAhuE" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center h-10 px-6 font-medium tracking-wide text-white transition duration-300 rounded-full shadow-md bg-emerald-600 hover:bg-emerald-700 focus:shadow-outline focus:outline-none transform hover:scale-105">
+                Event Link
+            </a>
+        </div>
+    </div>
+</header>
+
+    <main>
+        <!-- =================================================================
+             HOME (HERO SECTION)
+        ================================================================== -->
+        <section id="home" class="relative min-h-screen flex items-center justify-center gradient-hero text-white overflow-hidden">
+            <canvas id="hero-canvas" class="absolute top-0 left-0 w-full h-full opacity-20"></canvas>
+            <div class="relative z-10 text-center px-4">
+                <h1 class="text-4xl sm:text-6xl lg:text-8xl font-extrabold tracking-tighter mb-4">
+                    4th National Earth Fest
+                </h1>
+                <p class="text-lg sm:text-2xl text-emerald-300 uppercase tracking-widest mb-8">
+                    Beat Plastic Pollution
+                </p>
+                <div class="inline-flex flex-col sm:flex-row items-center gap-4 sm:gap-6 bg-white/10 p-4 rounded-xl border border-white/20 backdrop-blur-sm">
+                    <div class="flex items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                        <span>Viqarunnisa Noon School & College</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
+                        <span> August, 2025</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =================================================================
+             ABOUT US SECTION
+        ================================================================== -->
+        <section id="about" class="py-24 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16 observe">
+                    <h2 class="text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight">About The Fest</h2>
+                </div>
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="observe">
+                        <img src="logo.jpg" alt="Viqarunnisa Noon Earth Club members" class="rounded-2xl shadow-xl w-full">
+                    </div>
+                    <div class="observe space-y-6">
+                        <div>
+                            <h3 class="text-2xl font-bold text-emerald-800 mb-2">Our Mission: A Call to Action</h3>
+                            <p class="text-slate-600 leading-relaxed">The 4th National Earth Fest is more than an event; it's a movement. Our mission is to unite the youth of the nation, empowering them to be the vanguard of change. Through creativity, innovation, and knowledge, we aim to ignite a nationwide passion for sustainability and drive tangible action against plastic pollution.</p>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-emerald-800 mb-2">About Viqarunnisa Noon Earth Club (VNEC)</h3>
+                            <p class="text-slate-600 leading-relaxed">Established with the vision of fostering environmental consciousness, VNEC has been at the forefront of youth-led green initiatives. We believe in the power of education and action to create lasting change. This festival is our flagship event, designed to provide a national platform for students to innovate, to speak, and to lead the charge for a cleaner planet.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =================================================================
+             EVENT BANNER SECTION
+        ================================================================== -->
+        <section id="banner" class="py-24 bg-slate-50">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16 observe">
+                    <h2 class="text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight">Official Event Banner</h2>
+                </div>
+                <div class="observe">
+                    <img src="banner.jpg" alt="4th National Earth Fest Banner" class="rounded-2xl shadow-2xl w-full max-w-6xl mx-auto">
+                </div>
+            </div>
+        </section>
+
+        <!-- =================================================================
+             WHY PARTICIPATE SECTION
+        ================================================================== -->
+        <section id="why-participate" class="py-24 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16 observe">
+                    <h2 class="text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight">Why Participate?</h2>
+                </div>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="observe bg-slate-50 p-8 rounded-2xl border border-slate-200 text-center transition-transform transform hover:-translate-y-2">
+                        <div class="inline-flex items-center justify-center w-12 h-12 mb-4 rounded-full bg-emerald-100 text-emerald-700">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15.232 5.232 3.536 3.536m-2.036-5.036a2.5 2.5 0 1 1 3.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"/></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Showcase Talent</h3><p class="text-slate-600">A national stage to display your skills in arts, science, and public speaking.</p></div>
+                    <div class="observe bg-slate-50 p-8 rounded-2xl border border-slate-200 text-center transition-transform transform hover:-translate-y-2">
+                        <div class="inline-flex items-center justify-center w-12 h-12 mb-4 rounded-full bg-emerald-100 text-emerald-700">
+                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/><path d="M12 22a7.99 7.99 0 0 0 5.66-2.34"/></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Gain Knowledge</h3><p class="text-slate-600">Deepen your understanding of critical environmental issues and solutions.</p></div>
+                    <div class="observe bg-slate-50 p-8 rounded-2xl border border-slate-200 text-center transition-transform transform hover:-translate-y-2">
+                        <div class="inline-flex items-center justify-center w-12 h-12 mb-4 rounded-full bg-emerald-100 text-emerald-700">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Network & Connect</h3><p class="text-slate-600">Meet like-minded peers and environmental leaders from across the country.</p></div>
+                    <div class="observe bg-slate-50 p-8 rounded-2xl border border-slate-200 text-center transition-transform transform hover:-translate-y-2">
+                        <div class="inline-flex items-center justify-center w-12 h-12 mb-4 rounded-full bg-emerald-100 text-emerald-700">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Make an Impact</h3><p class="text-slate-600">Be part of a youth-led movement contributing to a sustainable future.</p></div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- =================================================================
+             COMPETITION SEGMENTS SECTION
+        ================================================================== -->
+        <section id="segments" class="py-24 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16 observe">
+                    <h2 class="text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight">Competition Segments</h2>
+                </div>
+                <div class="max-w-4xl mx-auto">
+                    <div class="tabs-container mb-8 flex justify-center flex-wrap gap-2 p-1 bg-slate-100 border border-slate-200 rounded-full observe"></div>
+                    <div class="tab-content-container"></div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- =================================================================
+             OUR TEAM SECTION
+        ================================================================== -->
+        <section id="team" class="py-24 bg-slate-50">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16 observe">
+                    <h2 class="text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight">Meet the Organizing Team</h2>
+                </div>
+                <div class="observe max-w-5xl mx-auto">
+                    <div class="bg-white p-4 rounded-2xl shadow-xl border border-slate-200">
+                         <img src="https://placehold.co/1200x600/E0F2F1/004D40?text=The+Organizing+Team" alt="The Organizing Team" class="rounded-xl w-full">
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+        
+        <!-- =================================================================
+             GALLERY SECTION
+        ================================================================== -->
+        <section id="gallery" class="py-24 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16 observe">
+                    <h2 class="text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight">Glimpses From Past Events</h2>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                    <div class="observe col-span-1 row-span-1 group"><div class="overflow-hidden rounded-xl shadow-lg"><img src="https://placehold.co/600x400/00796b/ffffff?text=Earth+Fest+2024" alt="Gallery Image 1" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"></div></div>
+                    <div class="observe col-span-1 md:col-span-2 row-span-1 group"><div class="overflow-hidden rounded-xl shadow-lg"><img src="https://placehold.co/800x400/4db6ac/ffffff?text=Project+Display" alt="Gallery Image 2" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"></div></div>
+                    <div class="observe col-span-1 md:col-span-2 row-span-1 group"><div class="overflow-hidden rounded-xl shadow-lg"><img src="https://placehold.co/800x400/004d40/ffffff?text=Award+Ceremony" alt="Gallery Image 3" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"></div></div>
+                    <div class="observe col-span-1 row-span-1 group"><div class="overflow-hidden rounded-xl shadow-lg"><img src="https://placehold.co/600x400/00796b/ffffff?text=Teamwork" alt="Gallery Image 4" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"></div></div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="gradient-hero text-white">
+        <div class="container mx-auto px-4 py-16 text-center">
+            <p>&copy; 2025 Viqarunnisa Noon Earth Club. All Rights Reserved.</p>
+            <p class="text-sm text-emerald-300 mt-2 max-w-2xl mx-auto">VNEC reserves the right to modify event guidelines. All official updates will be announced solely through the official event page.</p>
+        </div>
+    </footer>
+
+    <script>
+        // --- Interactive Particle Background ---
+        const canvas = document.getElementById('hero-canvas');
+        if (canvas) {
+            const ctx = canvas.getContext('2d');
+            canvas.width = window.innerWidth; canvas.height = window.innerHeight;
+            let particlesArray;
+            const mouse = { x: null, y: null, radius: (canvas.height/120) * (canvas.width/120) };
+            window.addEventListener('mousemove', (event) => { mouse.x = event.x; mouse.y = event.y; });
+            window.addEventListener('mouseout', () => { mouse.x = undefined; mouse.y = undefined; });
+            window.addEventListener('resize', () => { canvas.width = window.innerWidth; canvas.height = window.innerHeight; mouse.radius = (canvas.height/120) * (canvas.width/120); initParticles(); });
+            class Particle {
+                constructor(x, y, dX, dY, s) { this.x=x; this.y=y; this.directionX=dX; this.directionY=dY; this.size=s; }
+                draw() { ctx.beginPath(); ctx.arc(this.x, this.y, this.size, 0, Math.PI*2, false); ctx.fillStyle='rgba(77, 182, 172, 0.4)'; ctx.fill(); }
+                update() {
+                    if (this.x>canvas.width||this.x<0) this.directionX=-this.directionX;
+                    if (this.y>canvas.height||this.y<0) this.directionY=-this.directionY;
+                    let dx=mouse.x-this.x; let dy=mouse.y-this.y; let dist=Math.sqrt(dx*dx+dy*dy);
+                    if (dist<mouse.radius+this.size) {
+                        if (mouse.x<this.x&&this.x<canvas.width-this.size*10) this.x+=3;
+                        if (mouse.x>this.x&&this.x>this.size*10) this.x-=3;
+                        if (mouse.y<this.y&&this.y<canvas.height-this.size*10) this.y+=3;
+                        if (mouse.y>this.y&&this.y>this.size*10) this.y-=3;
+                    }
+                    this.x+=this.directionX; this.y+=this.directionY; this.draw();
+                }
+            }
+            function initParticles() {
+                particlesArray = [];
+                let num = (canvas.height*canvas.width)/15000;
+                for (let i=0; i<num; i++) {
+                    let s=(Math.random()*2.5)+1; let x=(Math.random()*((innerWidth-s*2)-(s*2))+s*2); let y=(Math.random()*((innerHeight-s*2)-(s*2))+s*2);
+                    let dX=(Math.random()*0.3)-0.15; let dY=(Math.random()*0.3)-0.15;
+                    particlesArray.push(new Particle(x,y,dX,dY,s));
+                }
+            }
+            function animateParticles() { requestAnimationFrame(animateParticles); ctx.clearRect(0,0,innerWidth,innerHeight); for (let i=0; i<particlesArray.length; i++) particlesArray[i].update(); }
+            initParticles(); animateParticles();
+        }
+
+        // --- Data for Segments ---
+        const segmentData = {
+            junior: [
+                { title: 'Crossword + Word Search', description: 'Explore environmental terminology through fun, engaging puzzles.', rules: ['Class 3–5, VNS students only', 'Duration: 30 minutes', 'On-the-spot, individual participation', 'Only pen/pencil allowed'] },
+                { title: 'Memory Contest', description: 'A thrilling test of attention, observation, and quick thinking.', rules: ['Class 3–5, VNS students only', 'Observe items for approx. 30 seconds', 'Answer questions based on observation', 'Individual participation'] },
+                { title: 'Drawing', description: 'Depict the beauty of a clean Earth and the dangers of pollution through art.', rules: ['Class 3 & 4, VNS students only', 'Theme: "Beat Plastic Pollution"', 'Bring your own materials; paper provided', 'Duration: 60 minutes on the spot', 'No watercolours, glitters, or stickers'] },
+                { title: 'Wall Magazine', fee: '300tk', description: 'Express creativity and awareness about environmental issues in a team.', rules: ['Class 5 only', 'Team of 3 members', 'Theme: "Beat Plastic Pollution"', 'Size: 5ft x 4ft', 'Use eco-friendly materials'], submission: 'Submit physically by Aug 1-2 at VNSC main campus.' }
+            ],
+            senior: [
+                { title: 'Wall Magazine', fee: '300tk', description: 'Express creativity and awareness about environmental issues in a team.', rules: ['Team of 3 members', 'Theme: "Beat Plastic Pollution"', 'Size: 5ft x 4ft', 'Use eco-friendly materials'], submission: 'Submit physically by Aug 1-2 at VNSC main campus.' },
+                { title: 'Olympiad', fee: '100tk', description: 'Test your understanding of environmental science, sustainability, and plastic pollution.', rules: ['Individual participation', '20 MCQ & short-answer questions', 'Duration: 30 minutes', 'No devices or reference materials allowed'] },
+                { title: 'Project Display', fee: '300tk', description: 'Showcase environmental innovations with the theme "Recycle to Restore".', rules: ['Team of 3 members', 'Project must use recycled materials', 'Models must be prepared beforehand'], submission: 'Submit physically by Aug 1-2 at VNSC main campus.' },
+                { title: 'Extempore Speech', fee: '100tk', description: 'Ignite awareness and drive action with your words.', rules: ['Individual participation', 'Random topic given on the spot', 'Prep time: 1 min, Speaking time: 2 mins', 'Language: English or Bengali', 'No notes allowed'] },
+                { title: 'Scrapbook', fee: '200tk', description: 'Merge writing, art, and environmental knowledge into a powerful narrative.', rules: ['Individual submission', 'Handmade, 4-10 pages', 'No digital scrapbooks'], submission: 'Submit physically by Aug 1-2 at VNSC main campus.' },
+                { title: 'Theme Writing / Story Writing / Article Writing', fee: 'FREE', description: 'Shape narratives that matter and raise awareness through the written word.', rules: ['Individual submission', 'Language: English or Bengali', 'Word Limit: 250-350 words', 'Must be original work'], submission: 'Submit PDF by July 30 via Google Form.' }
+            ],
+            secondary: [
+                { title: 'Wall Magazine', fee: '300tk', description: 'Express creativity and awareness about environmental issues in a team.', rules: ['Team of 3 members', 'Theme: "Beat Plastic Pollution"', 'Size: 5ft x 4ft', 'Use eco-friendly materials'], submission: 'Submit physically by Aug 1-2 at VNSC main campus.' },
+                { title: 'Olympiad', fee: '100tk', description: 'Test your understanding of environmental science, sustainability, and plastic pollution.', rules: ['Individual participation', '20 MCQ & short-answer questions', 'Duration: 30 minutes', 'No devices or reference materials allowed'] },
+                { title: 'Project Display', fee: '300tk', description: 'Showcase environmental innovations with the theme "Recycle to Restore".', rules: ['Team of 3 members', 'Project must use recycled materials', 'Models must be prepared beforehand'], submission: 'Submit physically by Aug 1-2 at VNSC main campus.' },
+                { title: 'Extempore Speech', fee: '100tk', description: 'Ignite awareness and drive action with your words.', rules: ['Individual participation', 'Random topic given on the spot', 'Prep time: 1 min, Speaking time: 2 mins', 'Language: English or Bengali', 'No notes allowed'] },
+                { title: 'Scrapbook', fee: '200tk', description: 'Merge writing, art, and environmental knowledge into a powerful narrative.', rules: ['Individual submission', 'Handmade, 4-10 pages', 'No digital scrapbooks'], submission: 'Submit physically by Aug 1-2 at VNSC main campus.' },
+                { title: 'Photography', fee: 'Reg: 100tk | Exb: 300tk', description: 'Tell a powerful environmental story through a single photograph.', rules: ['Individual submission, one photo only', 'Mobile or camera allowed', 'Basic editing permitted, no AI', 'Include title and caption (max 50 words)'], submission: 'Submit JPEG/PNG by July 30 via Google Form.' },
+                { title: 'Recycle Relay', fee: '200tk', description: 'A high-energy race combining speed with waste management principles.', rules: ['Team of 2 members', 'Identify and sort plastic, paper, metal, e-waste', 'Judged on accuracy and speed'] }
+            ],
+            'higher-secondary': [
+                { title: 'Wall Magazine', fee: '300tk', description: 'Express creativity and awareness about environmental issues in a team.', rules: ['Team of 3 members', 'Theme: "Beat Plastic Pollution"', 'Size: 5ft x 4ft', 'Use eco-friendly materials'], submission: 'Submit physically by Aug 1-2 at VNSC main campus.' },
+                { title: 'Olympiad', fee: '100tk', description: 'Test your understanding of environmental science, sustainability, and plastic pollution.', rules: ['Individual participation', '20 MCQ & short-answer questions', 'Duration: 30 minutes', 'No devices or reference materials allowed'] },
+                { title: 'Project Display', fee: '300tk', description: 'Showcase environmental innovations with the theme "Recycle to Restore".', rules: ['Team of 3 members', 'Project must use recycled materials', 'Models must be prepared beforehand'], submission: 'Submit physically by Aug 1-2 at VNSC main campus.' },
+                { title: 'Extempore Speech', fee: '100tk', description: 'Ignite awareness and drive action with your words.', rules: ['Individual participation', 'Random topic given on the spot', 'Prep time: 1 min, Speaking time: 2 mins', 'Language: English or Bengali', 'No notes allowed'] },
+                { title: 'Photography', fee: 'Reg: 100tk | Exb: 300tk', description: 'Tell a powerful environmental story through a single photograph.', rules: ['Individual submission, one photo only', 'Mobile or camera allowed', 'Basic editing permitted, no AI', 'Include title and caption (max 50 words)'], submission: 'Submit JPEG/PNG by July 30 via Google Form.' },
+                { title: 'Recycle Relay', fee: '200tk', description: 'A high-energy race combining speed with waste management principles.', rules: ['Team of 2 members', 'Identify and sort plastic, paper, metal, e-waste', 'Judged on accuracy and speed'] },
+                { title: 'Short Film', fee: '200tk', description: 'Craft a compelling cinematic story to inspire action against plastic pollution.', rules: ['Individual or Team of 2', 'Theme: "Beat Plastic Pollution"', 'Duration: 2-5 minutes', 'Two rounds: Online submission & public interaction'], submission: 'Submit MP4 by July 30 via Google Form.' },
+                { title: 'Case Study', fee: '300tk', description: 'Step into the shoes of policy makers and propose solutions to real-world problems.', rules: ['Team of 3 members', 'No plagiarism or AI', 'Two rounds: Online submission & on-spot finale', 'Finale: 7 min presentation, 3 min Q&A'], submission: 'Submit PDF of slides & summary via Google Form.' }
+            ]
+        };
+
+        // --- Tab and Accordion Initialization ---
+        const tabsContainer = document.querySelector('.tabs-container');
+        const tabContentContainer = document.querySelector('.tab-content-container');
+        
+        let tabsHTML = '';
+        let tabContentHTML = '';
+
+        Object.keys(segmentData).forEach((key, index) => {
+            const categoryName = key.replace('-', ' ').replace(/\b\w/g, l => l.toUpperCase());
+            tabsHTML += `<button class="tab-btn px-4 py-2 text-sm font-semibold rounded-full transition-colors duration-300 ${index === 0 ? 'active bg-emerald-600 text-white' : 'text-slate-600 hover:bg-slate-200'}" data-tab="${key}">${categoryName}</button>`;
+            
+            let accordionHTML = '';
+            segmentData[key].forEach((segment, segmentIndex) => {
+                accordionHTML += `
+                    <div class="accordion-item bg-white border border-slate-200 rounded-lg mb-3">
+                        <button class="accordion-header w-full text-left flex justify-between items-center p-5 hover:bg-slate-50 transition-colors duration-200">
+                            <span class="text-lg font-semibold text-slate-900">${segment.title}</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6 text-slate-500"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </button>
+                        <div class="accordion-content overflow-hidden max-h-0 transition-all duration-500 ease-in-out">
+                            <div class="p-5 border-t border-slate-200 text-slate-600 space-y-4">
+                                <p>${segment.description}</p>
+                                ${segment.fee ? `<p><span class="font-bold text-emerald-800 bg-emerald-100 px-2 py-1 rounded-md">${segment.fee}</span></p>` : ''}
+                                <div><h4 class="font-bold text-slate-800 mb-2">Rules:</h4><ul class="list-disc list-inside space-y-1">${segment.rules.map(rule => `<li>${rule}</li>`).join('')}</ul></div>
+                                ${segment.submission ? `<div><h4 class="font-bold text-slate-800 mb-2">Submission:</h4><p>${segment.submission}</p></div>` : ''}
+                                <div class="pt-4">
+                                    <a href="#" class="inline-flex items-center justify-center h-9 px-5 text-sm font-medium tracking-wide text-white transition duration-200 rounded-full shadow-sm bg-emerald-500 hover:bg-emerald-600 focus:shadow-outline focus:outline-none">
+                                        Register for ${segment.title}
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>`;
+            });
+
+            tabContentHTML += `<div class="tab-content ${index === 0 ? 'active' : ''}" id="${key}">${accordionHTML}</div>`;
+        });
+
+        tabsContainer.innerHTML = tabsHTML;
+        tabContentContainer.innerHTML = tabContentHTML;
+        
+        // --- Event Listeners ---
+        tabsContainer.addEventListener('click', e => {
+            if (!e.target.matches('.tab-btn')) return;
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active', 'bg-emerald-600', 'text-white'));
+            e.target.classList.add('active', 'bg-emerald-600', 'text-white');
+            document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+            document.getElementById(e.target.dataset.tab).classList.add('active');
+        });
+
+        tabContentContainer.addEventListener('click', e => {
+            const header = e.target.closest('.accordion-header');
+            if (!header) return;
+            const item = header.parentElement;
+            const content = item.querySelector('.accordion-content');
+            const isActive = item.classList.contains('active');
+            
+            item.classList.toggle('active');
+            content.style.maxHeight = isActive ? '0px' : content.scrollHeight + 'px';
+        });
+
+        // --- Scroll Animation Observer ---
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        document.querySelectorAll('.observe').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
