@@ -9,7 +9,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
     <style>
-        /* Custom Styles for a more refined, professional feel */
         body {
             font-family: 'Inter', sans-serif;
             background-color: #f8fafc; /* slate-50 */
@@ -19,20 +18,12 @@
         .gradient-hero {
             background-image: linear-gradient(160deg, #00251a 0%, #004d40 100%);
         }
-        /* Custom animation for scroll-triggered fade-in */
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
         }
-        .observe {
-            opacity: 0;
-            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-        }
-        .observe.is-visible {
-            opacity: 1;
-            animation: fadeIn 0.8s ease-out forwards;
-        }
-        /* Custom styles for the accordion toggle icon */
+        .observe { opacity: 0; transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
+        .observe.is-visible { opacity: 1; animation: fadeIn 0.8s ease-out forwards; }
         .accordion-header svg { transition: transform 0.3s ease-in-out; }
         .accordion-item.active .accordion-header svg { transform: rotate(180deg); }
         .tab-content { display: none; }
@@ -41,33 +32,29 @@
 </head>
 <body class="text-slate-700">
 
-    <!-- =================================================================
-         HEADER & NAVIGATION
-    ================================================================== -->
+    <!-- Header -->
     <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-xl border-b border-slate-200/80">
-    <div class="container mx-auto px-4">
-        <div class="flex items-center justify-between h-16">
-            <a href="#home" class="flex items-center gap-2 group">
-                <img src="logo.jpg" alt="Logo" class="h-10 w-10 transition-transform duration-300 group-hover:scale-110">
-                <span class="font-bold text-lg text-slate-900 hidden sm:block">VNEC</span>
-            </a>
-            <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600">
-                <a href="#about" class="hover:text-emerald-700 transition-colors">About</a>
-                <a href="#segments" class="hover:text-emerald-700 transition-colors">Segments</a>
-                <a href="#team" class="hover:text-emerald-700 transition-colors">Team</a>
-                <a href="#gallery" class="hover:text-emerald-700 transition-colors">Gallery</a>
-            </nav>
-            <a href="https://fb.me/e/2URTSAhuE" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center h-10 px-6 font-medium tracking-wide text-white transition duration-300 rounded-full shadow-md bg-emerald-600 hover:bg-emerald-700 focus:shadow-outline focus:outline-none transform hover:scale-105">
-                Event Link
-            </a>
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between h-16">
+                <a href="#home" class="flex items-center gap-2 group">
+                    <img src="logo.jpg" alt="Logo" class="h-10 w-10 transition-transform duration-300 group-hover:scale-110">
+                    <span class="font-bold text-lg text-slate-900 hidden sm:block">VNEC</span>
+                </a>
+                <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600">
+                    <a href="#about" class="hover:text-emerald-700 transition-colors">About</a>
+                    <a href="#segments" class="hover:text-emerald-700 transition-colors">Segments</a>
+                    <a href="#team" class="hover:text-emerald-700 transition-colors">Team</a>
+                    <a href="#gallery" class="hover:text-emerald-700 transition-colors">Gallery</a>
+                </nav>
+                <a href="https://fb.me/e/2URTSAhuE" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center h-10 px-6 font-medium tracking-wide text-white transition duration-300 rounded-full shadow-md bg-emerald-600 hover:bg-emerald-700 focus:shadow-outline focus:outline-none transform hover:scale-105">
+                    Event Link
+                </a>
+            </div>
         </div>
-    </div>
-</header>
+    </header>
 
     <main>
-        <!-- =================================================================
-             HOME (HERO SECTION)
-        ================================================================== -->
+        <!-- Hero -->
         <section id="home" class="relative min-h-screen flex items-center justify-center gradient-hero text-white overflow-hidden">
             <canvas id="hero-canvas" class="absolute top-0 left-0 w-full h-full opacity-20"></canvas>
             <div class="relative z-10 text-center px-4">
@@ -90,9 +77,7 @@
             </div>
         </section>
 
-        <!-- =================================================================
-             ABOUT US SECTION
-        ================================================================== -->
+        <!-- About -->
         <section id="about" class="py-24 bg-white">
             <div class="container mx-auto px-4">
                 <div class="text-center mb-16 observe">
@@ -116,9 +101,7 @@
             </div>
         </section>
 
-        <!-- =================================================================
-             EVENT BANNER SECTION
-        ================================================================== -->
+        <!-- Banner -->
         <section id="banner" class="py-24 bg-slate-50">
             <div class="container mx-auto px-4">
                 <div class="text-center mb-16 observe">
@@ -130,9 +113,7 @@
             </div>
         </section>
 
-        <!-- =================================================================
-             WHY PARTICIPATE SECTION
-        ================================================================== -->
+        <!-- Why Participate -->
         <section id="why-participate" class="py-24 bg-white">
             <div class="container mx-auto px-4">
                 <div class="text-center mb-16 observe">
@@ -143,29 +124,35 @@
                         <div class="inline-flex items-center justify-center w-12 h-12 mb-4 rounded-full bg-emerald-100 text-emerald-700">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15.232 5.232 3.536 3.536m-2.036-5.036a2.5 2.5 0 1 1 3.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"/></svg>
                         </div>
-                        <h3 class="text-xl font-bold text-slate-900 mb-2">Showcase Talent</h3><p class="text-slate-600">A national stage to display your skills in arts, science, and public speaking.</p></div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Showcase Talent</h3>
+                        <p class="text-slate-600">A national stage to display your skills in arts, science, and public speaking.</p>
+                    </div>
                     <div class="observe bg-slate-50 p-8 rounded-2xl border border-slate-200 text-center transition-transform transform hover:-translate-y-2">
                         <div class="inline-flex items-center justify-center w-12 h-12 mb-4 rounded-full bg-emerald-100 text-emerald-700">
                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/><path d="M12 22a7.99 7.99 0 0 0 5.66-2.34"/></svg>
                         </div>
-                        <h3 class="text-xl font-bold text-slate-900 mb-2">Gain Knowledge</h3><p class="text-slate-600">Deepen your understanding of critical environmental issues and solutions.</p></div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Gain Knowledge</h3>
+                        <p class="text-slate-600">Deepen your understanding of critical environmental issues and solutions.</p>
+                    </div>
                     <div class="observe bg-slate-50 p-8 rounded-2xl border border-slate-200 text-center transition-transform transform hover:-translate-y-2">
                         <div class="inline-flex items-center justify-center w-12 h-12 mb-4 rounded-full bg-emerald-100 text-emerald-700">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
                         </div>
-                        <h3 class="text-xl font-bold text-slate-900 mb-2">Network & Connect</h3><p class="text-slate-600">Meet like-minded peers and environmental leaders from across the country.</p></div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Network & Connect</h3>
+                        <p class="text-slate-600">Meet like-minded peers and environmental leaders from across the country.</p>
+                    </div>
                     <div class="observe bg-slate-50 p-8 rounded-2xl border border-slate-200 text-center transition-transform transform hover:-translate-y-2">
                         <div class="inline-flex items-center justify-center w-12 h-12 mb-4 rounded-full bg-emerald-100 text-emerald-700">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
                         </div>
-                        <h3 class="text-xl font-bold text-slate-900 mb-2">Make an Impact</h3><p class="text-slate-600">Be part of a youth-led movement contributing to a sustainable future.</p></div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Make an Impact</h3>
+                        <p class="text-slate-600">Be part of a youth-led movement contributing to a sustainable future.</p>
+                    </div>
                 </div>
             </div>
         </section>
-        
-        <!-- =================================================================
-             COMPETITION SEGMENTS SECTION
-        ================================================================== -->
+
+        <!-- Segments -->
         <section id="segments" class="py-24 bg-white">
             <div class="container mx-auto px-4">
                 <div class="text-center mb-16 observe">
@@ -177,10 +164,8 @@
                 </div>
             </div>
         </section>
-        
-        <!-- =================================================================
-             OUR TEAM SECTION
-        ================================================================== -->
+
+        <!-- Team -->
         <section id="team" class="py-24 bg-slate-50">
             <div class="container mx-auto px-4">
                 <div class="text-center mb-16 observe">
@@ -188,26 +173,39 @@
                 </div>
                 <div class="observe max-w-5xl mx-auto">
                     <div class="bg-white p-4 rounded-2xl shadow-xl border border-slate-200">
-                         <img src="https://placehold.co/1200x600/E0F2F1/004D40?text=The+Organizing+Team" alt="The Organizing Team" class="rounded-xl w-full">
+                        <img src="https://placehold.co/1200x600/E0F2F1/004D40?text=The+Organizing+Team" alt="The Organizing Team" class="rounded-xl w-full">
                     </div>
-                    
                 </div>
             </div>
         </section>
-        
-        <!-- =================================================================
-             GALLERY SECTION
-        ================================================================== -->
+
+        <!-- Gallery -->
         <section id="gallery" class="py-24 bg-white">
             <div class="container mx-auto px-4">
                 <div class="text-center mb-16 observe">
                     <h2 class="text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight">Glimpses From Past Events</h2>
                 </div>
                 <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-                    <div class="observe col-span-1 row-span-1 group"><div class="overflow-hidden rounded-xl shadow-lg"><img src="https://placehold.co/600x400/00796b/ffffff?text=Earth+Fest+2024" alt="Gallery Image 1" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"></div></div>
-                    <div class="observe col-span-1 md:col-span-2 row-span-1 group"><div class="overflow-hidden rounded-xl shadow-lg"><img src="https://placehold.co/800x400/4db6ac/ffffff?text=Project+Display" alt="Gallery Image 2" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"></div></div>
-                    <div class="observe col-span-1 md:col-span-2 row-span-1 group"><div class="overflow-hidden rounded-xl shadow-lg"><img src="https://placehold.co/800x400/004d40/ffffff?text=Award+Ceremony" alt="Gallery Image 3" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"></div></div>
-                    <div class="observe col-span-1 row-span-1 group"><div class="overflow-hidden rounded-xl shadow-lg"><img src="https://placehold.co/600x400/00796b/ffffff?text=Teamwork" alt="Gallery Image 4" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"></div></div>
+                    <div class="observe col-span-1 row-span-1 group">
+                        <div class="overflow-hidden rounded-xl shadow-lg">
+                            <img src="https://placehold.co/600x400/00796b/ffffff?text=Earth+Fest+2024" alt="Gallery Image 1" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        </div>
+                    </div>
+                    <div class="observe col-span-1 md:col-span-2 row-span-1 group">
+                        <div class="overflow-hidden rounded-xl shadow-lg">
+                            <img src="https://placehold.co/800x400/4db6ac/ffffff?text=Project+Display" alt="Gallery Image 2" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        </div>
+                    </div>
+                    <div class="observe col-span-1 md:col-span-2 row-span-1 group">
+                        <div class="overflow-hidden rounded-xl shadow-lg">
+                            <img src="https://placehold.co/800x400/004d40/ffffff?text=Award+Ceremony" alt="Gallery Image 3" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        </div>
+                    </div>
+                    <div class="observe col-span-1 row-span-1 group">
+                        <div class="overflow-hidden rounded-xl shadow-lg">
+                            <img src="https://placehold.co/600x400/00796b/ffffff?text=Teamwork" alt="Gallery Image 4" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -229,9 +227,13 @@
             canvas.width = window.innerWidth; canvas.height = window.innerHeight;
             let particlesArray;
             const mouse = { x: null, y: null, radius: (canvas.height/120) * (canvas.width/120) };
-            window.addEventListener('mousemove', (event) => { mouse.x = event.x; mouse.y = event.y; });
+            window.addEventListener('mousemove', (event) => { mouse.x = event.clientX; mouse.y = event.clientY; });
             window.addEventListener('mouseout', () => { mouse.x = undefined; mouse.y = undefined; });
-            window.addEventListener('resize', () => { canvas.width = window.innerWidth; canvas.height = window.innerHeight; mouse.radius = (canvas.height/120) * (canvas.width/120); initParticles(); });
+            window.addEventListener('resize', () => {
+                canvas.width = window.innerWidth; canvas.height = window.innerHeight;
+                mouse.radius = (canvas.height/120) * (canvas.width/120);
+                initParticles();
+            });
             class Particle {
                 constructor(x, y, dX, dY, s) { this.x=x; this.y=y; this.directionX=dX; this.directionY=dY; this.size=s; }
                 draw() { ctx.beginPath(); ctx.arc(this.x, this.y, this.size, 0, Math.PI*2, false); ctx.fillStyle='rgba(77, 182, 172, 0.4)'; ctx.fill(); }
@@ -261,56 +263,67 @@
             initParticles(); animateParticles();
         }
 
-        // --- Data for Segments ---
+        // --- Data for Segments (with working registration links) ---
         const segmentData = {
             junior: [
-                { title: 'Crossword + Word Search', description: 'Explore environmental terminology through fun, engaging puzzles.', rules: ['Class 3–5, VNS students only', 'Duration: 30 minutes', 'On-the-spot, individual participation', 'Only pen/pencil allowed'] },
-                { title: 'Memory Contest', description: 'A thrilling test of attention, observation, and quick thinking.', rules: ['Class 3–5, VNS students only', 'Observe items for approx. 30 seconds', 'Answer questions based on observation', 'Individual participation'] },
-                { title: 'Drawing', description: 'Depict the beauty of a clean Earth and the dangers of pollution through art.', rules: ['Class 3 & 4, VNS students only', 'Theme: "Beat Plastic Pollution"', 'Bring your own materials; paper provided', 'Duration: 60 minutes on the spot', 'No watercolours, glitters, or stickers'] },
-                { title: 'Wall Magazine', fee: '300tk', description: 'Express creativity and awareness about environmental issues in a team.', rules: ['Class 5 only', 'Team of 3 members', 'Theme: "Beat Plastic Pollution"', 'Size: 5ft x 4ft', 'Use eco-friendly materials'], submission: 'Submit physically by Aug 1-2 at VNSC main campus.' }
+                { title: 'Crossword + Word Search', description: 'Explore environmental terminology through fun, engaging puzzles.', rules: ['Class 3–5, VNS students only', 'Duration: 30 minutes', 'On-the-spot, individual participation', 'Only pen/pencil allowed'], noFormNote: 'Registration Form is not required for the students of junior category.' },
+                { title: 'Memory Contest', description: 'A thrilling test of attention, observation, and quick thinking.', rules: ['Class 3–5, VNS students only', 'Observe items for approx. 30 seconds', 'Answer questions based on observation', 'Individual participation'], noFormNote: 'Registration Form is not required for the students of junior category.' },
+                { title: 'Drawing', description: 'Depict the beauty of a clean Earth and the dangers of pollution through art.', rules: ['Class 3 & 4, VNS students only', 'Theme: "Beat Plastic Pollution"', 'Bring your own materials; paper provided', 'Duration: 60 minutes on the spot', 'No watercolours, glitters, or stickers'], noFormNote: 'Registration Form is not required for the students of junior category.' },
+                { title: 'Wall Magazine', fee: '300tk', description: 'Express creativity and awareness about environmental issues in a team.', rules: ['Class 5 only', 'Team of 3 members', 'Theme: "Beat Plastic Pollution"', 'Size: 5ft x 4ft', 'Use eco-friendly materials'], submission: 'Submit physically by Aug 1-2 at VNSC main campus.', form: 'https://forms.gle/737ZQccyiYuqinX29' }
             ],
             senior: [
-                { title: 'Wall Magazine', fee: '300tk', description: 'Express creativity and awareness about environmental issues in a team.', rules: ['Team of 3 members', 'Theme: "Beat Plastic Pollution"', 'Size: 5ft x 4ft', 'Use eco-friendly materials'], submission: 'Submit physically by Aug 1-2 at VNSC main campus.' },
-                { title: 'Olympiad', fee: '100tk', description: 'Test your understanding of environmental science, sustainability, and plastic pollution.', rules: ['Individual participation', '20 MCQ & short-answer questions', 'Duration: 30 minutes', 'No devices or reference materials allowed'] },
-                { title: 'Project Display', fee: '300tk', description: 'Showcase environmental innovations with the theme "Recycle to Restore".', rules: ['Team of 3 members', 'Project must use recycled materials', 'Models must be prepared beforehand'], submission: 'Submit physically by Aug 1-2 at VNSC main campus.' },
-                { title: 'Extempore Speech', fee: '100tk', description: 'Ignite awareness and drive action with your words.', rules: ['Individual participation', 'Random topic given on the spot', 'Prep time: 1 min, Speaking time: 2 mins', 'Language: English or Bengali', 'No notes allowed'] },
-                { title: 'Scrapbook', fee: '200tk', description: 'Merge writing, art, and environmental knowledge into a powerful narrative.', rules: ['Individual submission', 'Handmade, 4-10 pages', 'No digital scrapbooks'], submission: 'Submit physically by Aug 1-2 at VNSC main campus.' },
-                { title: 'Theme Writing / Story Writing / Article Writing', fee: 'FREE', description: 'Shape narratives that matter and raise awareness through the written word.', rules: ['Individual submission', 'Language: English or Bengali', 'Word Limit: 250-350 words', 'Must be original work'], submission: 'Submit PDF by July 30 via Google Form.' }
+                { title: 'Wall Magazine', fee: '300tk', description: 'Express creativity and awareness about environmental issues in a team.', rules: ['Team of 3 members', 'Theme: "Beat Plastic Pollution"', 'Size: 5ft x 4ft', 'Use eco-friendly materials'], submission: 'Submit physically by Aug 1-2 at VNSC main campus.', form: 'https://forms.gle/737ZQccyiYuqinX29' },
+                { title: 'Olympiad', fee: '100tk', description: 'Test your understanding of environmental science, sustainability, and plastic pollution.', rules: ['Individual participation', '20 MCQ & short-answer questions', 'Duration: 30 minutes', 'No devices or reference materials allowed'], form: 'https://forms.gle/nMxmz6DhVxYc1Ey76' },
+                { title: 'Project Display', fee: '300tk', description: 'Showcase environmental innovations with the theme "Recycle to Restore".', rules: ['Team of 3 members', 'Project must use recycled materials', 'Models must be prepared beforehand'], submission: 'Submit physically by Aug 1-2 at VNSC main campus.', form: 'https://forms.gle/UYwnVBzqo9pPkgfo9' },
+                { title: 'Eco Voice (Extempore Speech)', fee: '100tk', description: 'Ignite awareness and drive action with your words.', rules: ['Individual participation', 'Random topic given on the spot', 'Prep time: 1 min, Speaking time: 2 mins', 'Language: English or Bengali', 'No notes allowed'], form: 'https://forms.gle/qZKuPXAdUuWKCYyj7' },
+                { title: 'Scrapbook', fee: '200tk', description: 'Merge writing, art, and environmental knowledge into a powerful narrative.', rules: ['Individual submission', 'Handmade, 4-10 pages', 'No digital scrapbooks'], submission: 'Submit physically by Aug 1-2 at VNSC main campus.', form: 'https://forms.gle/ojcqatdtQYQiMBg4A' },
+                { title: 'Theme Writing / Story Writing / Article Writing', fee: 'FREE', description: 'Raise awareness through the written word.', rules: ['Individual submission', 'Language: English or Bengali', 'Word Limit: 250-350 words', 'Must be original work'], submission: 'Submit PDF by July 30 via Google Form.', form: 'https://forms.gle/i792eHjdAuDjDpco9' }
             ],
             secondary: [
-                { title: 'Wall Magazine', fee: '300tk', description: 'Express creativity and awareness about environmental issues in a team.', rules: ['Team of 3 members', 'Theme: "Beat Plastic Pollution"', 'Size: 5ft x 4ft', 'Use eco-friendly materials'], submission: 'Submit physically by Aug 1-2 at VNSC main campus.' },
-                { title: 'Olympiad', fee: '100tk', description: 'Test your understanding of environmental science, sustainability, and plastic pollution.', rules: ['Individual participation', '20 MCQ & short-answer questions', 'Duration: 30 minutes', 'No devices or reference materials allowed'] },
-                { title: 'Project Display', fee: '300tk', description: 'Showcase environmental innovations with the theme "Recycle to Restore".', rules: ['Team of 3 members', 'Project must use recycled materials', 'Models must be prepared beforehand'], submission: 'Submit physically by Aug 1-2 at VNSC main campus.' },
-                { title: 'Extempore Speech', fee: '100tk', description: 'Ignite awareness and drive action with your words.', rules: ['Individual participation', 'Random topic given on the spot', 'Prep time: 1 min, Speaking time: 2 mins', 'Language: English or Bengali', 'No notes allowed'] },
-                { title: 'Scrapbook', fee: '200tk', description: 'Merge writing, art, and environmental knowledge into a powerful narrative.', rules: ['Individual submission', 'Handmade, 4-10 pages', 'No digital scrapbooks'], submission: 'Submit physically by Aug 1-2 at VNSC main campus.' },
-                { title: 'Photography', fee: 'Reg: 100tk | Exb: 300tk', description: 'Tell a powerful environmental story through a single photograph.', rules: ['Individual submission, one photo only', 'Mobile or camera allowed', 'Basic editing permitted, no AI', 'Include title and caption (max 50 words)'], submission: 'Submit JPEG/PNG by July 30 via Google Form.' },
-                { title: 'Recycle Relay', fee: '200tk', description: 'A high-energy race combining speed with waste management principles.', rules: ['Team of 2 members', 'Identify and sort plastic, paper, metal, e-waste', 'Judged on accuracy and speed'] }
+                { title: 'Wall Magazine', fee: '300tk', description: 'Express creativity and awareness about environmental issues in a team.', rules: ['Team of 3 members', 'Theme: "Beat Plastic Pollution"', 'Size: 5ft x 4ft', 'Use eco-friendly materials'], submission: 'Submit physically by Aug 1-2 at VNSC main campus.', form: 'https://forms.gle/737ZQccyiYuqinX29' },
+                { title: 'Olympiad', fee: '100tk', description: 'Test your understanding of environmental science, sustainability, and plastic pollution.', rules: ['Individual participation', '20 MCQ & short-answer questions', 'Duration: 30 minutes', 'No devices or reference materials allowed'], form: 'https://forms.gle/nMxmz6DhVxYc1Ey76' },
+                { title: 'Project Display', fee: '300tk', description: 'Showcase environmental innovations with the theme "Recycle to Restore".', rules: ['Team of 3 members', 'Project must use recycled materials', 'Models must be prepared beforehand'], submission: 'Submit physically by Aug 1-2 at VNSC main campus.', form: 'https://forms.gle/UYwnVBzqo9pPkgfo9' },
+                { title: 'Eco Voice (Extempore Speech)', fee: '100tk', description: 'Ignite awareness and drive action with your words.', rules: ['Individual participation', 'Random topic given on the spot', 'Prep time: 1 min, Speaking time: 2 mins', 'Language: English or Bengali', 'No notes allowed'], form: 'https://forms.gle/qZKuPXAdUuWKCYyj7' },
+                { title: 'Scrapbook', fee: '200tk', description: 'Merge writing, art, and environmental knowledge into a powerful narrative.', rules: ['Individual submission', 'Handmade, 4-10 pages', 'No digital scrapbooks'], submission: 'Submit physically by Aug 1-2 at VNSC main campus.', form: 'https://forms.gle/ojcqatdtQYQiMBg4A' },
+                { title: 'Eco Lens (Photography)', fee: 'Reg: 100tk | Exb: 300tk', description: 'Tell a powerful environmental story through a single photograph.', rules: ['Individual submission, one photo only', 'Mobile or camera allowed', 'Basic editing permitted, no AI', 'Include title and caption (max 50 words)'], submission: 'Submit JPEG/PNG by July 30 via Google Form.', form: 'https://forms.gle/sZTtk55AdZh9mZcD9' },
+                { title: 'Recycle Relay', fee: '200tk', description: 'A high-energy race combining speed with waste management principles.', rules: ['Team of 2 members', 'Identify and sort plastic, paper, metal, e-waste', 'Judged on accuracy and speed'], form: 'https://forms.gle/zG9Cd492HVgBApfT6' }
             ],
             'higher-secondary': [
-                { title: 'Wall Magazine', fee: '300tk', description: 'Express creativity and awareness about environmental issues in a team.', rules: ['Team of 3 members', 'Theme: "Beat Plastic Pollution"', 'Size: 5ft x 4ft', 'Use eco-friendly materials'], submission: 'Submit physically by Aug 1-2 at VNSC main campus.' },
-                { title: 'Olympiad', fee: '100tk', description: 'Test your understanding of environmental science, sustainability, and plastic pollution.', rules: ['Individual participation', '20 MCQ & short-answer questions', 'Duration: 30 minutes', 'No devices or reference materials allowed'] },
-                { title: 'Project Display', fee: '300tk', description: 'Showcase environmental innovations with the theme "Recycle to Restore".', rules: ['Team of 3 members', 'Project must use recycled materials', 'Models must be prepared beforehand'], submission: 'Submit physically by Aug 1-2 at VNSC main campus.' },
-                { title: 'Extempore Speech', fee: '100tk', description: 'Ignite awareness and drive action with your words.', rules: ['Individual participation', 'Random topic given on the spot', 'Prep time: 1 min, Speaking time: 2 mins', 'Language: English or Bengali', 'No notes allowed'] },
-                { title: 'Photography', fee: 'Reg: 100tk | Exb: 300tk', description: 'Tell a powerful environmental story through a single photograph.', rules: ['Individual submission, one photo only', 'Mobile or camera allowed', 'Basic editing permitted, no AI', 'Include title and caption (max 50 words)'], submission: 'Submit JPEG/PNG by July 30 via Google Form.' },
-                { title: 'Recycle Relay', fee: '200tk', description: 'A high-energy race combining speed with waste management principles.', rules: ['Team of 2 members', 'Identify and sort plastic, paper, metal, e-waste', 'Judged on accuracy and speed'] },
-                { title: 'Short Film', fee: '200tk', description: 'Craft a compelling cinematic story to inspire action against plastic pollution.', rules: ['Individual or Team of 2', 'Theme: "Beat Plastic Pollution"', 'Duration: 2-5 minutes', 'Two rounds: Online submission & public interaction'], submission: 'Submit MP4 by July 30 via Google Form.' },
-                { title: 'Case Study', fee: '300tk', description: 'Step into the shoes of policy makers and propose solutions to real-world problems.', rules: ['Team of 3 members', 'No plagiarism or AI', 'Two rounds: Online submission & on-spot finale', 'Finale: 7 min presentation, 3 min Q&A'], submission: 'Submit PDF of slides & summary via Google Form.' }
+                { title: 'Wall Magazine', fee: '300tk', description: 'Express creativity and awareness about environmental issues in a team.', rules: ['Team of 3 members', 'Theme: "Beat Plastic Pollution"', 'Size: 5ft x 4ft', 'Use eco-friendly materials'], submission: 'Submit physically by Aug 1-2 at VNSC main campus.', form: 'https://forms.gle/737ZQccyiYuqinX29' },
+                { title: 'Olympiad', fee: '100tk', description: 'Test your understanding of environmental science, sustainability, and plastic pollution.', rules: ['Individual participation', '20 MCQ & short-answer questions', 'Duration: 30 minutes', 'No devices or reference materials allowed'], form: 'https://forms.gle/nMxmz6DhVxYc1Ey76' },
+                { title: 'Project Display', fee: '300tk', description: 'Showcase environmental innovations with the theme "Recycle to Restore".', rules: ['Team of 3 members', 'Project must use recycled materials', 'Models must be prepared beforehand'], submission: 'Submit physically by Aug 1-2 at VNSC main campus.', form: 'https://forms.gle/UYwnVBzqo9pPkgfo9' },
+                { title: 'Eco Voice (Extempore Speech)', fee: '100tk', description: 'Ignite awareness and drive action with your words.', rules: ['Individual participation', 'Random topic given on the spot', 'Prep time: 1 min, Speaking time: 2 mins', 'Language: English or Bengali', 'No notes allowed'], form: 'https://forms.gle/qZKuPXAdUuWKCYyj7' },
+                { title: 'Eco Lens (Photography)', fee: 'Reg: 100tk | Exb: 300tk', description: 'Tell a powerful environmental story through a single photograph.', rules: ['Individual submission, one photo only', 'Mobile or camera allowed', 'Basic editing permitted, no AI', 'Include title and caption (max 50 words)'], submission: 'Submit JPEG/PNG by July 30 via Google Form.', form: 'https://forms.gle/sZTtk55AdZh9mZcD9' },
+                { title: 'Recycle Relay', fee: '200tk', description: 'A high-energy race combining speed with waste management principles.', rules: ['Team of 2 members', 'Identify and sort plastic, paper, metal, e-waste', 'Judged on accuracy and speed'], form: 'https://forms.gle/zG9Cd492HVgBApfT6' },
+                { title: 'Cinegreen (Short Film)', fee: '200tk', description: 'Craft a compelling cinematic story to inspire action against plastic pollution.', rules: ['Individual or Team of 2', 'Theme: "Beat Plastic Pollution"', 'Duration: 2-5 minutes', 'Two rounds: Online submission & public interaction'], submission: 'Submit MP4 by July 30 via Google Form.', form: 'https://forms.gle/gxsargTYkoRuY2WBA' },
+                { title: 'Case Study', fee: '300tk', description: 'Step into the shoes of policy makers and propose solutions to real-world problems.', rules: ['Team of 3 members', 'No plagiarism or AI', 'Two rounds: Online submission & on-spot finale', 'Finale: 7 min presentation, 3 min Q&A'], submission: 'Submit PDF of slides & summary via Google Form.', form: 'https://forms.gle/acYtHqVeikzH2gy28' }
             ]
         };
 
-        // --- Tab and Accordion Initialization ---
+        // --- Tabs & Accordions ---
         const tabsContainer = document.querySelector('.tabs-container');
         const tabContentContainer = document.querySelector('.tab-content-container');
-        
+
         let tabsHTML = '';
         let tabContentHTML = '';
 
         Object.keys(segmentData).forEach((key, index) => {
             const categoryName = key.replace('-', ' ').replace(/\b\w/g, l => l.toUpperCase());
             tabsHTML += `<button class="tab-btn px-4 py-2 text-sm font-semibold rounded-full transition-colors duration-300 ${index === 0 ? 'active bg-emerald-600 text-white' : 'text-slate-600 hover:bg-slate-200'}" data-tab="${key}">${categoryName}</button>`;
-            
+
             let accordionHTML = '';
-            segmentData[key].forEach((segment, segmentIndex) => {
+            segmentData[key].forEach((segment) => {
+                const rulesHTML = (segment.rules || []).map(rule => `<li>${rule}</li>`).join('');
+                const feeHTML = segment.fee ? `<p><span class="font-bold text-emerald-800 bg-emerald-100 px-2 py-1 rounded-md">Registration Fee: ${segment.fee}</span></p>` : '';
+                const submissionHTML = segment.submission ? `<div><h4 class="font-bold text-slate-800 mb-2">Submission:</h4><p>${segment.submission}</p></div>` : '';
+                const actionHTML = segment.form
+                    ? `<div class="pt-4">
+                            <a href="${segment.form}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center h-9 px-5 text-sm font-medium tracking-wide text-white transition duration-200 rounded-full shadow-sm bg-emerald-500 hover:bg-emerald-600 focus:shadow-outline focus:outline-none">
+                                Register for ${segment.title}
+                            </a>
+                       </div>`
+                    : (segment.noFormNote ? `<p class="pt-2 text-sm italic text-slate-500">${segment.noFormNote}</p>` : '');
+
                 accordionHTML += `
                     <div class="accordion-item bg-white border border-slate-200 rounded-lg mb-3">
                         <button class="accordion-header w-full text-left flex justify-between items-center p-5 hover:bg-slate-50 transition-colors duration-200">
@@ -319,15 +332,11 @@
                         </button>
                         <div class="accordion-content overflow-hidden max-h-0 transition-all duration-500 ease-in-out">
                             <div class="p-5 border-t border-slate-200 text-slate-600 space-y-4">
-                                <p>${segment.description}</p>
-                                ${segment.fee ? `<p><span class="font-bold text-emerald-800 bg-emerald-100 px-2 py-1 rounded-md">${segment.fee}</span></p>` : ''}
-                                <div><h4 class="font-bold text-slate-800 mb-2">Rules:</h4><ul class="list-disc list-inside space-y-1">${segment.rules.map(rule => `<li>${rule}</li>`).join('')}</ul></div>
-                                ${segment.submission ? `<div><h4 class="font-bold text-slate-800 mb-2">Submission:</h4><p>${segment.submission}</p></div>` : ''}
-                                <div class="pt-4">
-                                    <a href="#" class="inline-flex items-center justify-center h-9 px-5 text-sm font-medium tracking-wide text-white transition duration-200 rounded-full shadow-sm bg-emerald-500 hover:bg-emerald-600 focus:shadow-outline focus:outline-none">
-                                        Register for ${segment.title}
-                                    </a>
-                                </div>
+                                <p>${segment.description || ''}</p>
+                                ${feeHTML}
+                                <div><h4 class="font-bold text-slate-800 mb-2">Rules:</h4><ul class="list-disc list-inside space-y-1">${rulesHTML}</ul></div>
+                                ${submissionHTML}
+                                ${actionHTML}
                             </div>
                         </div>
                     </div>`;
@@ -338,8 +347,8 @@
 
         tabsContainer.innerHTML = tabsHTML;
         tabContentContainer.innerHTML = tabContentHTML;
-        
-        // --- Event Listeners ---
+
+        // Tab switch
         tabsContainer.addEventListener('click', e => {
             if (!e.target.matches('.tab-btn')) return;
             document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active', 'bg-emerald-600', 'text-white'));
@@ -348,18 +357,18 @@
             document.getElementById(e.target.dataset.tab).classList.add('active');
         });
 
+        // Accordion toggle
         tabContentContainer.addEventListener('click', e => {
             const header = e.target.closest('.accordion-header');
             if (!header) return;
             const item = header.parentElement;
             const content = item.querySelector('.accordion-content');
             const isActive = item.classList.contains('active');
-            
             item.classList.toggle('active');
             content.style.maxHeight = isActive ? '0px' : content.scrollHeight + 'px';
         });
 
-        // --- Scroll Animation Observer ---
+        // Scroll animation
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -368,7 +377,6 @@
                 }
             });
         }, { threshold: 0.1 });
-        
         document.querySelectorAll('.observe').forEach(el => observer.observe(el));
     </script>
 </body>
