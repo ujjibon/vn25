@@ -179,36 +179,75 @@
             </div>
         </section>
 
-        <!-- Gallery -->
-        <section id="gallery" class="py-24 bg-white">
-            <div class="container mx-auto px-4">
-                <div class="text-center mb-16 observe">
-                    <h2 class="text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight">Glimpses From Past Events</h2>
-                </div>
-                <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-                    <div class="observe col-span-1 row-span-1 group">
-                        <div class="overflow-hidden rounded-xl shadow-lg">
-                            <img src="https://placehold.co/600x400/00796b/ffffff?text=Earth+Fest+2024" alt="Gallery Image 1" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                        </div>
-                    </div>
-                    <div class="observe col-span-1 md:col-span-2 row-span-1 group">
-                        <div class="overflow-hidden rounded-xl shadow-lg">
-                            <img src="https://placehold.co/800x400/4db6ac/ffffff?text=Project+Display" alt="Gallery Image 2" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                        </div>
-                    </div>
-                    <div class="observe col-span-1 md:col-span-2 row-span-1 group">
-                        <div class="overflow-hidden rounded-xl shadow-lg">
-                            <img src="https://placehold.co/800x400/004d40/ffffff?text=Award+Ceremony" alt="Gallery Image 3" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                        </div>
-                    </div>
-                    <div class="observe col-span-1 row-span-1 group">
-                        <div class="overflow-hidden rounded-xl shadow-lg">
-                            <img src="https://placehold.co/600x400/00796b/ffffff?text=Teamwork" alt="Gallery Image 4" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+<!-- Gallery -->
+<section id="gallery" class="py-24 bg-white">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-16 observe">
+      <h2 class="text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight">Glimpses From Past Events</h2>
+    </div>
+
+    <!-- added gallery-grid for stagger targeting -->
+    <div class="gallery-grid grid grid-cols-2 md:grid-cols-4 gap-4">
+
+      <div class="observe group">
+        <div class="overflow-hidden rounded-xl shadow-lg gallery-card">
+          <img loading="lazy" src="p1.jpg" alt="Gallery Image 1"
+               class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+        </div>
+      </div>
+
+      <div class="observe group">
+        <div class="overflow-hidden rounded-xl shadow-lg gallery-card">
+          <img loading="lazy" src="p2.jpg" alt="Gallery Image 2"
+               class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+        </div>
+      </div>
+
+      <div class="observe group">
+        <div class="overflow-hidden rounded-xl shadow-lg gallery-card">
+          <img loading="lazy" src="p3.jpg" alt="Gallery Image 3"
+               class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+        </div>
+      </div>
+
+      <div class="observe group">
+        <div class="overflow-hidden rounded-xl shadow-lg gallery-card">
+          <img loading="lazy" src="p4.jpg" alt="Gallery Image 4"
+               class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+        </div>
+      </div>
+
+      <div class="observe group">
+        <div class="overflow-hidden rounded-xl shadow-lg gallery-card">
+          <img loading="lazy" src="p5.jpg" alt="Gallery Image 5"
+               class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+        </div>
+      </div>
+
+      <div class="observe group">
+        <div class="overflow-hidden rounded-xl shadow-lg gallery-card">
+          <img loading="lazy" src="p6.jpg" alt="Gallery Image 6"
+               class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+        </div>
+      </div>
+
+      <div class="observe group">
+        <div class="overflow-hidden rounded-xl shadow-lg gallery-card">
+          <img loading="lazy" src="p7.jpg" alt="Gallery Image 7"
+               class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+        </div>
+      </div>
+
+      <div class="observe group">
+        <div class="overflow-hidden rounded-xl shadow-lg gallery-card">
+          <img loading="lazy" src="p8.jpg" alt="Gallery Image 8"
+               class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
 
     </main>
 
@@ -219,6 +258,39 @@
             <p class="text-sm text-emerald-300 mt-2 max-w-2xl mx-auto">VNEC reserves the right to modify event guidelines. All official updates will be announced solely through the official event page.</p>
         </div>
     </footer>
+
+    <style>
+  /* Gallery card load-in animation */
+  .gallery-card {
+    transition: transform 500ms ease, box-shadow 500ms ease, filter 500ms ease;
+    transform: translateY(12px) scale(0.98);
+    opacity: 0;
+  }
+  .observe.is-visible .gallery-card {
+    animation: popIn 600ms cubic-bezier(.2,.7,.3,1) forwards;
+  }
+  @keyframes popIn {
+    0%   { opacity: 0; transform: translateY(16px) scale(0.96); filter: blur(2px); }
+    60%  { opacity: 1; transform: translateY(0)   scale(1.01);  filter: blur(0); }
+    100% { opacity: 1; transform: translateY(0)   scale(1);     filter: none; }
+  }
+
+  /* Staggered delays (first 12 items covered; adjust if needed) */
+  .gallery-grid > .observe:nth-child(1)  .gallery-card { animation-delay: 0ms; }
+  .gallery-grid > .observe:nth-child(2)  .gallery-card { animation-delay: 80ms; }
+  .gallery-grid > .observe:nth-child(3)  .gallery-card { animation-delay: 160ms; }
+  .gallery-grid > .observe:nth-child(4)  .gallery-card { animation-delay: 240ms; }
+  .gallery-grid > .observe:nth-child(5)  .gallery-card { animation-delay: 320ms; }
+  .gallery-grid > .observe:nth-child(6)  .gallery-card { animation-delay: 400ms; }
+  .gallery-grid > .observe:nth-child(7)  .gallery-card { animation-delay: 480ms; }
+  .gallery-grid > .observe:nth-child(8)  .gallery-card { animation-delay: 560ms; }
+
+  /* Hover lift / tilt / shadow glow */
+  .group:hover .gallery-card {
+    transform: translateY(-4px) scale(1.03) rotate(0.25deg);
+    box-shadow: 0 12px 28px rgba(0,0,0,.15);
+  }
+</style>
 
     <script>
         // --- Interactive Particle Background ---
@@ -263,6 +335,8 @@
             function animateParticles() { requestAnimationFrame(animateParticles); ctx.clearRect(0,0,innerWidth,innerHeight); for (let i=0; i<particlesArray.length; i++) particlesArray[i].update(); }
             initParticles(); animateParticles();
         }
+
+        
 
         // --- Data for Segments (with working registration links) ---
         const segmentData = {
