@@ -212,6 +212,79 @@
             </div>
         </section>
 
+        <!-- Partners (Slideshow) -->
+        <section id="partners" class="py-24 bg-gradient-to-br from-slate-50 via-blue-50 to-emerald-50">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12 observe">
+                    <h2 class="text-4xl lg:text-5xl font-extrabold bg-gradient-to-r from-slate-800 via-emerald-700 to-blue-700 bg-clip-text text-transparent tracking-tight mb-4">Partners of 4NEF</h2>
+                </div>
+
+                <div class="relative observe" id="partners-carousel">
+                    <!-- gradient masks (left/right) -->
+                    <div class="pointer-events-none absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-slate-50 via-blue-50 to-transparent rounded-l-3xl z-10"></div>
+                    <div class="pointer-events-none absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-slate-50 via-emerald-50 to-transparent rounded-r-3xl z-10"></div>
+
+                    <!-- viewport -->
+                    <div class="overflow-hidden rounded-3xl border-2 border-gradient-to-r from-emerald-200 via-blue-200 to-emerald-200 shadow-2xl bg-white/80 backdrop-blur-sm">
+                        <!-- track -->
+                        <div class="flex items-center gap-8 px-8 py-16 will-change-transform transition-transform duration-700 ease-out"
+                            data-track>
+                            <!-- slides with partner names and sponsor levels -->
+                            <div class="text-center group">
+                                <div class="bg-gradient-to-br from-white to-emerald-50 p-6 rounded-2xl shadow-lg border border-emerald-100 hover:shadow-2xl hover:scale-105 transition-all duration-500 transform">
+                                    <img class="h-32 sm:h-36 md:h-40 object-contain mx-auto grayscale group-hover:grayscale-0 transition-all duration-500 mb-4 filter drop-shadow-lg" src="l1.jpg" alt="TS Transformers">
+                                    <h3 class="text-base font-bold text-slate-800 mb-1">TS Transformers</h3>
+                                    <p class="text-sm text-slate-600 font-medium">Silver Sponsor</p>
+                                </div>
+                            </div>
+                            <div class="text-center group">
+                                <div class="bg-gradient-to-br from-white to-blue-50 p-6 rounded-2xl shadow-lg border border-blue-100 hover:shadow-2xl hover:scale-105 transition-all duration-500 transform">
+                                    <img class="h-32 sm:h-36 md:h-40 object-contain mx-auto grayscale group-hover:grayscale-0 transition-all duration-500 mb-4 filter drop-shadow-lg" src="l2.jpg" alt="Pubali Bank PLC">
+                                    <h3 class="text-base font-bold text-slate-800 mb-1">Pubali Bank PLC</h3>
+                                    <p class="text-sm text-slate-600 font-medium">Bronze Sponsor</p>
+                                </div>
+                            </div>
+                            <div class="text-center group">
+                                <div class="bg-gradient-to-br from-white to-cyan-50 p-6 rounded-2xl shadow-lg border border-cyan-100 hover:shadow-2xl hover:scale-105 transition-all duration-500 transform">
+                                    <img class="h-32 sm:h-36 md:h-40 object-contain mx-auto grayscale group-hover:grayscale-0 transition-all duration-500 mb-4 filter drop-shadow-lg" src="l3.jpg" alt="Igloo">
+                                    <h3 class="text-base font-bold text-slate-800 mb-1">Igloo</h3>
+                                    <p class="text-sm text-slate-600 font-medium">Frozen Delight Sponsor</p>
+                                </div>
+                            </div>
+                            <div class="text-center group">
+                                <div class="bg-gradient-to-br from-white to-indigo-50 p-6 rounded-2xl shadow-lg border border-indigo-100 hover:shadow-2xl hover:scale-105 transition-all duration-500 transform">
+                                    <img class="h-32 sm:h-36 md:h-40 object-contain mx-auto grayscale group-hover:grayscale-0 transition-all duration-500 mb-4 filter drop-shadow-lg" src="l4.png" alt="Cognisor">
+                                    <h3 class="text-base font-bold text-slate-800 mb-1">Cognisor</h3>
+                                    <p class="text-sm text-slate-600 font-medium">Tech Sponsor</p>
+                                </div>
+                            </div>
+                            <div class="text-center group">
+                                <div class="bg-gradient-to-br from-white to-orange-50 p-6 rounded-2xl shadow-lg border border-orange-100 hover:shadow-2xl hover:scale-105 transition-all duration-500 transform">
+                                    <img class="h-32 sm:h-36 md:h-40 object-contain mx-auto grayscale group-hover:grayscale-0 transition-all duration-500 mb-4 filter drop-shadow-lg" src="l5.jpg" alt="A.T. Haque Limited">
+                                    <h3 class="text-xl font-bold text-slate-800 mb-1">A.T. Haque Limited</h3>
+                                    <p class="text-sm text-slate-600 font-medium">Snacks Sponsor</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- controls -->
+                    <button type="button" class="absolute left-4 top-1/2 -translate-y-1/2 grid place-items-center h-12 w-12 rounded-full bg-gradient-to-r from-emerald-500 to-blue-500 text-white border-2 border-white shadow-xl hover:shadow-2xl hover:scale-110 z-20 transition-all duration-300"
+                            aria-label="Previous" data-prev>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m15 19-7-7 7-7"/>
+                        </svg>
+                    </button>
+                    <button type="button" class="absolute right-4 top-1/2 -translate-y-1/2 grid place-items-center h-12 w-12 rounded-full bg-gradient-to-r from-blue-500 to-emerald-500 text-white border-2 border-white shadow-xl hover:shadow-2xl hover:scale-110 z-20 transition-all duration-300"
+                            aria-label="Next" data-next>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+
         <!-- Why Participate -->
         <section id="why-participate" class="py-24 bg-white">
             <div class="container mx-auto px-4">
@@ -264,6 +337,143 @@
             </div>
         </section>
 
+        <!-- Magazine Submission -->
+        <section id="magazine-submission" class="py-24 bg-gradient-to-br from-emerald-50 to-green-50">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16 observe">
+                    <h2 class="text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight">Magazine Submission</h2>
+                    <p class="text-xl text-emerald-700 mt-4 font-medium">Open Call for VNEC Magazine</p>
+                </div>
+                <div class="max-w-4xl mx-auto">
+                    <div class="bg-white rounded-2xl shadow-xl border border-emerald-200 p-8 observe">
+                        <div class="text-center mb-8">
+                            <div class="inline-flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-emerald-100 text-emerald-700">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-bold text-slate-900 mb-4">Take this chance to have your photographs and drawings featured in the VNEC Magazine for the 4th National Earth Fest.</h3>
+                            <p class="text-lg text-slate-600 mb-6">So share your talent and submit your best clicks or paintings today!</p>
+                        </div>
+                        
+                        <div class="grid md:grid-cols-2 gap-8 mb-8">
+                            <div class="bg-emerald-50 p-6 rounded-xl border border-emerald-200">
+                                <h4 class="text-lg font-bold text-emerald-800 mb-3 flex items-center gap-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <polyline points="12,6 12,12 16,14"/>
+                                    </svg>
+                                    Deadline
+                                </h4>
+                                <p class="text-2xl font-bold text-emerald-700">20th August</p>
+                            </div>
+                            <div class="bg-green-50 p-6 rounded-xl border border-green-200">
+                                <h4 class="text-lg font-bold text-green-800 mb-3 flex items-center gap-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                        <polyline points="4,6 20,6"/>
+                                        <line x1="4" y1="10" x2="20" y2="10"/>
+                                    </svg>
+                                    Contact
+                                </h4>
+                                <p class="text-lg font-medium text-green-700">vneceditorial@gmail.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="text-center">
+                            <div class="inline-flex items-center gap-2 bg-amber-100 text-amber-800 px-4 py-2 rounded-full text-sm font-medium">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z"/>
+                                </svg>
+                                AI or copied work is strictly prohibited
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stall Booking -->
+        <section id="stall-booking" class="py-24 bg-gradient-to-br from-blue-50 to-indigo-50">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16 observe">
+                    <h2 class="text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight">Stall Booking</h2>
+                    <p class="text-xl text-blue-700 mt-4 font-medium">Stall Booking is Now Open!</p>
+                </div>
+                <div class="max-w-4xl mx-auto">
+                    <div class="bg-white rounded-2xl shadow-xl border border-blue-200 p-8 observe">
+                        <div class="text-center mb-8">
+                            <div class="inline-flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-blue-100 text-blue-700">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                                    <polyline points="9,22 9,12 15,12 15,22"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-bold text-slate-900 mb-4">VNSC students (Class 6-12), this is your chance to set up your own stall at our upcoming event!</h3>
+                        </div>
+                        
+                        <div class="grid md:grid-cols-2 gap-8 mb-8">
+                            <div class="bg-blue-50 p-6 rounded-xl border border-blue-200">
+                                <h4 class="text-lg font-bold text-blue-800 mb-3 flex items-center gap-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                    </svg>
+                                    Stall Fee
+                                </h4>
+                                <p class="text-2xl font-bold text-blue-700">7000 BDT</p>
+                            </div>
+                            <div class="bg-indigo-50 p-6 rounded-xl border border-indigo-200">
+                                <h4 class="text-lg font-bold text-indigo-800 mb-3 flex items-center gap-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                                        <circle cx="9" cy="7" r="4"/>
+                                        <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+                                        <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                                    </svg>
+                                    Team Requirements
+                                </h4>
+                                <p class="text-lg font-medium text-indigo-700">Minimum 3 members per stall</p>
+                                <p class="text-sm text-indigo-600 mt-2">All stall members must be registered club members</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-gradient-to-r from-blue-50 to-indigo-50 p-6 rounded-xl border border-blue-200 mb-8">
+                            <h4 class="text-lg font-bold text-blue-800 mb-3 flex items-center gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+                                    <circle cx="12" cy="10" r="3"/>
+                                </svg>
+                                For booking, please contact
+                            </h4>
+                            <div class="text-center">
+                                <p class="text-xl font-bold text-blue-700 mb-2">Morsheda Irin Miss</p>
+                                <p class="text-lg text-blue-600">College Building</p>
+                                <div class="mt-4 space-y-2">
+                                    <p class="text-sm text-blue-600">
+                                        <span class="font-semibold">Morning:</span> 11:20-11:40 AM
+                                    </p>
+                                    <p class="text-sm text-blue-600">
+                                        <span class="font-semibold">Afternoon:</span> After 2:00 PM
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="text-center">
+                            <div class="inline-flex items-center gap-2 bg-green-100 text-green-800 px-6 py-3 rounded-full text-lg font-medium">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M9 12l2 2 4-4"/>
+                                    <path d="M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9 9 4.03 9 9z"/>
+                                </svg>
+                                Don't miss the opportunity to showcase your talent, creativity, and team spirit!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Team -->
         <section id="team" class="py-24 bg-slate-50">
             <div class="container mx-auto px-4">
@@ -279,179 +489,6 @@
         </section>
 
 
-                 <!-- Partners (Slideshow) -->
- <section id="partners" class="py-24 bg-gradient-to-br from-slate-50 via-blue-50 to-emerald-50">
-   <div class="container mx-auto px-4">
-           <div class="text-center mb-12 observe">
-        <h2 class="text-4xl lg:text-5xl font-extrabold bg-gradient-to-r from-slate-800 via-emerald-700 to-blue-700 bg-clip-text text-transparent tracking-tight mb-4">Partners of 4NEF</h2>
-      </div>
- 
-     <div class="relative observe" id="partners-carousel">
-       <!-- gradient masks (left/right) -->
-       <div class="pointer-events-none absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-slate-50 via-blue-50 to-transparent rounded-l-3xl z-10"></div>
-       <div class="pointer-events-none absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-slate-50 via-emerald-50 to-transparent rounded-r-3xl z-10"></div>
- 
-       <!-- viewport -->
-       <div class="overflow-hidden rounded-3xl border-2 border-gradient-to-r from-emerald-200 via-blue-200 to-emerald-200 shadow-2xl bg-white/80 backdrop-blur-sm">
-         <!-- track -->
-                   <div class="flex items-center gap-8 px-8 py-16 will-change-transform transition-transform duration-700 ease-out"
-               data-track>
-                    <!-- slides with partner names and sponsor levels -->
-            <div class="text-center group">
-              <div class="bg-gradient-to-br from-white to-emerald-50 p-6 rounded-2xl shadow-lg border border-emerald-100 hover:shadow-2xl hover:scale-105 transition-all duration-500 transform">
-                                 <img class="h-32 sm:h-36 md:h-40 object-contain mx-auto grayscale group-hover:grayscale-0 transition-all duration-500 mb-4 filter drop-shadow-lg" src="l1.jpg" alt="TS Transformers">
-                                 <h3 class="text-base font-bold text-slate-800 mb-1">TS Transformers</h3>
-                 <p class="text-sm text-slate-600 font-medium">Silver Sponsor</p>
-              </div>
-            </div>
-            <div class="text-center group">
-              <div class="bg-gradient-to-br from-white to-blue-50 p-6 rounded-2xl shadow-lg border border-blue-100 hover:shadow-2xl hover:scale-105 transition-all duration-500 transform">
-                                 <img class="h-32 sm:h-36 md:h-40 object-contain mx-auto grayscale group-hover:grayscale-0 transition-all duration-500 mb-4 filter drop-shadow-lg" src="l2.jpg" alt="Pubali Bank PLC">
-                                 <h3 class="text-base font-bold text-slate-800 mb-1">Pubali Bank PLC</h3>
-                 <p class="text-sm text-slate-600 font-medium">Bronze Sponsor</p>
-              </div>
-            </div>
-            <div class="text-center group">
-              <div class="bg-gradient-to-br from-white to-cyan-50 p-6 rounded-2xl shadow-lg border border-cyan-100 hover:shadow-2xl hover:scale-105 transition-all duration-500 transform">
-                                 <img class="h-32 sm:h-36 md:h-40 object-contain mx-auto grayscale group-hover:grayscale-0 transition-all duration-500 mb-4 filter drop-shadow-lg" src="l3.jpg" alt="Igloo">
-                                 <h3 class="text-base font-bold text-slate-800 mb-1">Igloo</h3>
-                 <p class="text-sm text-slate-600 font-medium">Frozen Delight Sponsor</p>
-              </div>
-            </div>
-            <div class="text-center group">
-              <div class="bg-gradient-to-br from-white to-indigo-50 p-6 rounded-2xl shadow-lg border border-indigo-100 hover:shadow-2xl hover:scale-105 transition-all duration-500 transform">
-                                 <img class="h-32 sm:h-36 md:h-40 object-contain mx-auto grayscale group-hover:grayscale-0 transition-all duration-500 mb-4 filter drop-shadow-lg" src="l4.png" alt="Cognisor">
-                                 <h3 class="text-base font-bold text-slate-800 mb-1">Cognisor</h3>
-                 <p class="text-sm text-slate-600 font-medium">Tech Sponsor</p>
-              </div>
-            </div>
-            <div class="text-center group">
-              <div class="bg-gradient-to-br from-white to-orange-50 p-6 rounded-2xl shadow-lg border border-orange-100 hover:shadow-2xl hover:scale-105 transition-all duration-500 transform">
-                                 <img class="h-32 sm:h-36 md:h-40 object-contain mx-auto grayscale group-hover:grayscale-0 transition-all duration-500 mb-4 filter drop-shadow-lg" src="l5.jpg" alt="A.T. Haque Limited">
-                                 <h3 class="text-base font-bold text-slate-800 mb-1">A.T. Haque Limited</h3>
-                 <p class="text-sm text-slate-600 font-medium">Snacks Sponsor</p>
-              </div>
-            </div>
-         </div>
-       </div>
-       
-       <!-- controls -->
-       <button type="button" class="absolute left-4 top-1/2 -translate-y-1/2 grid place-items-center h-12 w-12 rounded-full bg-gradient-to-r from-emerald-500 to-blue-500 text-white border-2 border-white shadow-xl hover:shadow-2xl hover:scale-110 z-20 transition-all duration-300"
-               aria-label="Previous" data-prev>
-         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m15 19-7-7 7-7"/>
-         </svg>
-       </button>
-       <button type="button" class="absolute right-4 top-1/2 -translate-y-1/2 grid place-items-center h-12 w-12 rounded-full bg-gradient-to-r from-blue-500 to-emerald-500 text-white border-2 border-white shadow-xl hover:shadow-2xl hover:scale-110 z-20 transition-all duration-300"
-               aria-label="Next" data-next>
-         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7"/>
-         </svg>
-       </button>
-     </div>
-   </div>
- </section>
-
-<script>
-  // Partners carousel (autoplay, loop, pause on hover, buttons)
-  (function partnersSlider(){
-    const root = document.querySelector('#partners-carousel');
-    if (!root) return;
-
-    const track = root.querySelector('[data-track]');
-    const slides = Array.from(track.children);
-
-    // Create a proper infinite loop by duplicating slides multiple times
-    // This ensures smooth continuous scrolling without white spaces
-    for (let i = 0; i < 3; i++) {
-      slides.forEach(node => track.appendChild(node.cloneNode(true)));
-    }
-
-    let index = 0;
-    let auto = null;
-    const GAP = 32;              // matches gap-8 (8*4px)
-    const STEP = 1;              // move 1 partner at a time for smooth viewing
-    const INTERVAL = 3000;       // increased interval for better viewing
-    const ORIGINAL_COUNT = slides.length; // 5 original partners
-
-    function itemWidth(){
-      // approximate item width including gap
-      const first = track.children[0];
-      if (!first) return 0;
-      const rect = first.getBoundingClientRect();
-      return rect.width + GAP;
-    }
-
-    function moveNext(step = STEP){
-      index += step;
-      const w = itemWidth();
-
-      // translate
-      track.style.transition = 'transform 700ms ease-out';
-      track.style.transform = `translateX(${-index * w}px)`;
-
-      // Reset to beginning when we reach the end of original slides
-      if (index >= ORIGINAL_COUNT) {
-        setTimeout(() => {
-          index = 0;
-          track.style.transition = 'none';
-          track.style.transform = `translateX(0)`;
-        }, 720);
-      }
-    }
-
-    function movePrev(step = STEP){
-      const w = itemWidth();
-
-      index -= step;
-      if (index < 0) {
-        index = ORIGINAL_COUNT - 1; // go to last original partner
-        track.style.transition = 'none';
-        track.style.transform = `translateX(${-index * w}px)`;
-      }
-      requestAnimationFrame(() => {
-        requestAnimationFrame(() => {
-          track.style.transition = 'transform 700ms ease-out';
-          track.style.transform = `translateX(${-index * w}px)`;
-        });
-      });
-    }
-
-    // Buttons
-    root.querySelector('[data-next]').addEventListener('click', () => moveNext(1));
-    root.querySelector('[data-prev]').addEventListener('click', () => movePrev(1));
-
-    // Autoplay
-    function start(){ stop(); auto = setInterval(moveNext, INTERVAL); }
-    function stop(){ if (auto) clearInterval(auto); auto = null; }
-
-    // Pause on hover / focus within
-    root.addEventListener('mouseenter', stop);
-    root.addEventListener('mouseleave', start);
-    root.addEventListener('focusin', stop);
-    root.addEventListener('focusout', start);
-
-    // Resize handling to keep alignment crisp
-    let resizeTimer;
-    window.addEventListener('resize', () => {
-      clearTimeout(resizeTimer);
-      resizeTimer = setTimeout(() => {
-        track.style.transition = 'none';
-        const w = itemWidth();
-        // Ensure index stays within bounds of original slides
-        if (index >= ORIGINAL_COUNT) index = 0;
-        if (index < 0) index = ORIGINAL_COUNT - 1;
-        track.style.transform = `translateX(${-index * w}px)`;
-      }, 100);
-    });
-
-    // Respect reduced motion
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-
-    // Kick off
-    start();
-  })();
-</script>
 
 <!-- Gallery -->
 <section id="gallery" class="py-24 bg-white">
@@ -612,42 +649,42 @@
 
         
 
-        // --- Data for Segments (with working registration links) ---
-        const segmentData = {
-            junior: [
-                { title: 'Crossword + Word Search', description: 'Explore environmental terminology through fun, engaging puzzles.', rules: ['Class 3–5, VNS students only', 'Duration: 30 minutes', 'On-the-spot, individual participation', 'Only pen/pencil allowed'], noFormNote: 'Registration Form is not required for the students of junior category.' },
-                { title: 'Memory Contest', description: 'A thrilling test of attention, observation, and quick thinking.', rules: ['Class 3–5, VNS students only', 'Observe items for approx. 30 seconds', 'Answer questions based on observation', 'Individual participation'], noFormNote: 'Registration Form is not required for the students of junior category.' },
-                { title: 'Drawing', description: 'Depict the beauty of a clean Earth and the dangers of pollution through art.', rules: ['Class 3 & 4, VNS students only', 'Theme: "Beat Plastic Pollution"', 'Bring your own materials; paper provided', 'Duration: 60 minutes on the spot', 'No watercolours, glitters, or stickers'], noFormNote: 'Registration Form is not required for the students of junior category.' },
-                { title: 'Wall Magazine', fee: '300tk', description: 'Express creativity and awareness about environmental issues in a team.', rules: ['Class 5 only', 'Team of 3 members', 'Theme: "Beat Plastic Pollution"', 'Size: 5ft x 4ft', 'Use eco-friendly materials'], submission: 'Submit physically by Aug 1-2 at VNSC main campus.', form: 'https://forms.gle/737ZQccyiYuqinX29' }
-            ],
-            senior: [
-                { title: 'Wall Magazine', fee: '300tk', description: 'Express creativity and awareness about environmental issues in a team.', rules: ['Team of 3 members', 'Theme: "Beat Plastic Pollution"', 'Size: 5ft x 4ft', 'Use eco-friendly materials'], submission: 'Submit physically by Aug 1-2 at VNSC main campus.', form: 'https://forms.gle/737ZQccyiYuqinX29' },
-                { title: 'Olympiad', fee: '100tk', description: 'Test your understanding of environmental science, sustainability, and plastic pollution.', rules: ['Individual participation', '20 MCQ & short-answer questions', 'Duration: 30 minutes', 'No devices or reference materials allowed'], form: 'https://forms.gle/nMxmz6DhVxYc1Ey76' },
-                { title: 'Project Display', fee: '300tk', description: 'Showcase environmental innovations with the theme "Recycle to Restore".', rules: ['Team of 3 members', 'Project must use recycled materials', 'Models must be prepared beforehand'], submission: 'Submit physically by Aug 1-2 at VNSC main campus.', form: 'https://forms.gle/UYwnVBzqo9pPkgfo9' },
-                { title: 'Eco Voice (Extempore Speech)', fee: '100tk', description: 'Ignite awareness and drive action with your words.', rules: ['Individual participation', 'Random topic given on the spot', 'Prep time: 1 min, Speaking time: 2 mins', 'Language: English or Bengali', 'No notes allowed'], form: 'https://forms.gle/qZKuPXAdUuWKCYyj7' },
-                { title: 'Scrapbook', fee: '200tk', description: 'Merge writing, art, and environmental knowledge into a powerful narrative.', rules: ['Individual submission', 'Handmade, 4-10 pages', 'No digital scrapbooks'], submission: 'Submit physically by Aug 1-2 at VNSC main campus.', form: 'https://forms.gle/ojcqatdtQYQiMBg4A' },
-                { title: 'Theme Writing / Story Writing / Article Writing', fee: 'FREE', description: 'Raise awareness through the written word.', rules: ['Individual submission', 'Language: English or Bengali', 'Word Limit: 250-350 words', 'Must be original work'], submission: 'Submit PDF by July 30 via Google Form.', form: 'https://forms.gle/i792eHjdAuDjDpco9' }
-            ],
-            secondary: [
-                { title: 'Wall Magazine', fee: '300tk', description: 'Express creativity and awareness about environmental issues in a team.', rules: ['Team of 3 members', 'Theme: "Beat Plastic Pollution"', 'Size: 5ft x 4ft', 'Use eco-friendly materials'], submission: 'Submit physically by Aug 1-2 at VNSC main campus.', form: 'https://forms.gle/737ZQccyiYuqinX29' },
-                { title: 'Olympiad', fee: '100tk', description: 'Test your understanding of environmental science, sustainability, and plastic pollution.', rules: ['Individual participation', '20 MCQ & short-answer questions', 'Duration: 30 minutes', 'No devices or reference materials allowed'], form: 'https://forms.gle/nMxmz6DhVxYc1Ey76' },
-                { title: 'Project Display', fee: '300tk', description: 'Showcase environmental innovations with the theme "Recycle to Restore".', rules: ['Team of 3 members', 'Project must use recycled materials', 'Models must be prepared beforehand'], submission: 'Submit physically by Aug 1-2 at VNSC main campus.', form: 'https://forms.gle/UYwnVBzqo9pPkgfo9' },
-                { title: 'Eco Voice (Extempore Speech)', fee: '100tk', description: 'Ignite awareness and drive action with your words.', rules: ['Individual participation', 'Random topic given on the spot', 'Prep time: 1 min, Speaking time: 2 mins', 'Language: English or Bengali', 'No notes allowed'], form: 'https://forms.gle/qZKuPXAdUuWKCYyj7' },
-                { title: 'Scrapbook', fee: '200tk', description: 'Merge writing, art, and environmental knowledge into a powerful narrative.', rules: ['Individual submission', 'Handmade, 4-10 pages', 'No digital scrapbooks'], submission: 'Submit physically by Aug 1-2 at VNSC main campus.', form: 'https://forms.gle/ojcqatdtQYQiMBg4A' },
-                { title: 'Eco Lens (Photography)', fee: 'Reg: 100tk | Exb: 300tk', description: 'Tell a powerful environmental story through a single photograph.', rules: ['Individual submission, one photo only', 'Mobile or camera allowed', 'Basic editing permitted, no AI', 'Include title and caption (max 50 words)'], submission: 'Submit JPEG/PNG by July 30 via Google Form.', form: 'https://forms.gle/sZTtk55AdZh9mZcD9' },
-                { title: 'Recycle Relay', fee: '200tk', description: 'A high-energy race combining speed with waste management principles.', rules: ['Team of 2 members', 'Identify and sort plastic, paper, metal, e-waste', 'Judged on accuracy and speed'], form: 'https://forms.gle/zG9Cd492HVgBApfT6' }
-            ],
-            'higher-secondary': [
-                { title: 'Wall Magazine', fee: '300tk', description: 'Express creativity and awareness about environmental issues in a team.', rules: ['Team of 3 members', 'Theme: "Beat Plastic Pollution"', 'Size: 5ft x 4ft', 'Use eco-friendly materials'], submission: 'Submit physically by Aug 1-2 at VNSC main campus.', form: 'https://forms.gle/737ZQccyiYuqinX29' },
-                { title: 'Olympiad', fee: '100tk', description: 'Test your understanding of environmental science, sustainability, and plastic pollution.', rules: ['Individual participation', '20 MCQ & short-answer questions', 'Duration: 30 minutes', 'No devices or reference materials allowed'], form: 'https://forms.gle/nMxmz6DhVxYc1Ey76' },
-                { title: 'Project Display', fee: '300tk', description: 'Showcase environmental innovations with the theme "Recycle to Restore".', rules: ['Team of 3 members', 'Project must use recycled materials', 'Models must be prepared beforehand'], submission: 'Submit physically by Aug 1-2 at VNSC main campus.', form: 'https://forms.gle/UYwnVBzqo9pPkgfo9' },
-                { title: 'Eco Voice (Extempore Speech)', fee: '100tk', description: 'Ignite awareness and drive action with your words.', rules: ['Individual participation', 'Random topic given on the spot', 'Prep time: 1 min, Speaking time: 2 mins', 'Language: English or Bengali', 'No notes allowed'], form: 'https://forms.gle/qZKuPXAdUuWKCYyj7' },
-                { title: 'Eco Lens (Photography)', fee: 'Reg: 100tk | Exb: 300tk', description: 'Tell a powerful environmental story through a single photograph.', rules: ['Individual submission, one photo only', 'Mobile or camera allowed', 'Basic editing permitted, no AI', 'Include title and caption (max 50 words)'], submission: 'Submit JPEG/PNG by July 30 via Google Form.', form: 'https://forms.gle/sZTtk55AdZh9mZcD9' },
-                { title: 'Recycle Relay', fee: '200tk', description: 'A high-energy race combining speed with waste management principles.', rules: ['Team of 2 members', 'Identify and sort plastic, paper, metal, e-waste', 'Judged on accuracy and speed'], form: 'https://forms.gle/zG9Cd492HVgBApfT6' },
-                { title: 'Cinegreen (Short Film)', fee: '200tk', description: 'Craft a compelling cinematic story to inspire action against plastic pollution.', rules: ['Individual or Team of 2', 'Theme: "Beat Plastic Pollution"', 'Duration: 2-5 minutes', 'Two rounds: Online submission & public interaction'], submission: 'Submit MP4 by July 30 via Google Form.', form: 'https://forms.gle/gxsargTYkoRuY2WBA' },
-                { title: 'Case Study', fee: '300tk', description: 'Step into the shoes of policy makers and propose solutions to real-world problems.', rules: ['Team of 3 members', 'No plagiarism or AI', 'Two rounds: Online submission & on-spot finale', 'Finale: 7 min presentation, 3 min Q&A'], submission: 'Submit PDF of slides & summary via Google Form.', form: 'https://forms.gle/acYtHqVeikzH2gy28' }
-            ]
-        };
+                 // --- Data for Segments (with working registration links) ---
+         const segmentData = {
+             junior: [
+                 { title: 'Crossword + Word Search', description: 'Explore environmental terminology through fun, engaging puzzles.', rules: ['Class 3–5, VNS students only', 'Duration: 30 minutes', 'On-the-spot, individual participation', 'Only pen/pencil allowed'], noFormNote: 'Registration Form is not required for the students of junior category.' },
+                 { title: 'Memory Contest', description: 'A thrilling test of attention, observation, and quick thinking.', rules: ['Class 3–5, VNS students only', 'Observe items for approx. 30 seconds', 'Answer questions based on observation', 'Individual participation'], noFormNote: 'Registration Form is not required for the students of junior category.' },
+                 { title: 'Drawing', description: 'Depict the beauty of a clean Earth and the dangers of pollution through art.', rules: ['Class 3 & 4, VNS students only', 'Theme: "Beat Plastic Pollution"', 'Bring your own materials; paper provided', 'Duration: 60 minutes on the spot', 'No watercolours, glitters, or stickers'], noFormNote: 'Registration Form is not required for the students of junior category.' },
+                 { title: 'Wall Magazine', fee: '300tk', deadline: '25 August', description: 'Express creativity and awareness about environmental issues in a team.', rules: ['Class 5 only', 'Team of 3 members', 'Theme: "Beat Plastic Pollution"', 'Size: 5ft x 4ft', 'Use eco-friendly materials'], form: 'https://forms.gle/737ZQccyiYuqinX29' }
+             ],
+             senior: [
+                 { title: 'Wall Magazine', fee: '300tk', deadline: '25 August', description: 'Express creativity and awareness about environmental issues in a team.', rules: ['Team of 3 members', 'Theme: "Beat Plastic Pollution"', 'Size: 5ft x 4ft', 'Use eco-friendly materials'], form: 'https://forms.gle/737ZQccyiYuqinX29' },
+                 { title: 'Olympiad', fee: '100tk', deadline: '22 August', description: 'Test your understanding of environmental science, sustainability, and plastic pollution.', rules: ['Individual participation', '20 MCQ & short-answer questions', 'Duration: 30 minutes', 'No devices or reference materials allowed'], form: 'https://forms.gle/nMxmz6DhVxYc1Ey76' },
+                 { title: 'Project Display', fee: '300tk', deadline: '25 August', description: 'Showcase environmental innovations with the theme "Recycle to Restore".', rules: ['Team of 3 members', 'Project must use recycled materials', 'Models must be prepared beforehand'], form: 'https://forms.gle/UYwnVBzqo9pPkgfo9' },
+                 { title: 'Eco Voice (Extempore Speech)', fee: '100tk', deadline: '22 August', description: 'Ignite awareness and drive action with your words.', rules: ['Individual participation', 'Random topic given on the spot', 'Prep time: 1 min, Speaking time: 2 mins', 'Language: English or Bengali', 'No notes allowed'], form: 'https://forms.gle/qZKuPXAdUuWKCYyj7' },
+                 { title: 'Scrapbook', fee: '200tk', deadline: '25 August', description: 'Merge writing, art, and environmental knowledge into a powerful narrative.', rules: ['Individual submission', 'Handmade, 4-10 pages', 'No digital scrapbooks'], form: 'https://forms.gle/ojcqatdtQYQiMBg4A' },
+                 { title: 'Theme Writing / Story Writing / Article Writing', fee: 'FREE', deadline: '22 August', description: 'Raise awareness through the written word.', rules: ['Individual submission', 'Language: English or Bengali', 'Word Limit: 250-350 words', 'Must be original work'], form: 'https://forms.gle/i792eHjdAuDjDpco9' }
+             ],
+             secondary: [
+                 { title: 'Wall Magazine', fee: '300tk', deadline: '25 August', description: 'Express creativity and awareness about environmental issues in a team.', rules: ['Team of 3 members', 'Theme: "Beat Plastic Pollution"', 'Size: 5ft x 4ft', 'Use eco-friendly materials'], form: 'https://forms.gle/737ZQccyiYuqinX29' },
+                 { title: 'Olympiad', fee: '100tk', deadline: '22 August', description: 'Test your understanding of environmental science, sustainability, and plastic pollution.', rules: ['Individual participation', '20 MCQ & short-answer questions', 'Duration: 30 minutes', 'No devices or reference materials allowed'], form: 'https://forms.gle/nMxmz6DhVxYc1Ey76' },
+                 { title: 'Project Display', fee: '300tk', deadline: '25 August', description: 'Showcase environmental innovations with the theme "Recycle to Restore".', rules: ['Team of 3 members', 'Project must use recycled materials', 'Models must be prepared beforehand'], form: 'https://forms.gle/UYwnVBzqo9pPkgfo9' },
+                 { title: 'Eco Voice (Extempore Speech)', fee: '100tk', deadline: '22 August', description: 'Ignite awareness and drive action with your words.', rules: ['Individual participation', 'Random topic given on the spot', 'Prep time: 1 min, Speaking time: 2 mins', 'Language: English or Bengali', 'No notes allowed'], form: 'https://forms.gle/qZKuPXAdUuWKCYyj7' },
+                 { title: 'Scrapbook', fee: '200tk', deadline: '25 August', description: 'Merge writing, art, and environmental knowledge into a powerful narrative.', rules: ['Individual submission', 'Handmade, 4-10 pages', 'No digital scrapbooks'], form: 'https://forms.gle/ojcqatdtQYQiMBg4A' },
+                 { title: 'Eco Lens (Photography)', fee: 'Reg: 100tk | Exb: 300tk', deadline: '22 August', description: 'Tell a powerful environmental story through a single photograph.', rules: ['Individual submission, one photo only', 'Mobile or camera allowed', 'Basic editing permitted, no AI', 'Include title and caption (max 50 words)'], form: 'https://forms.gle/sZTtk55AdZh9mZcD9' },
+                 { title: 'Recycle Relay', fee: '200tk', deadline: '25 August', description: 'A high-energy race combining speed with waste management principles.', rules: ['Team of 2 members', 'Identify and sort plastic, paper, metal, e-waste', 'Judged on accuracy and speed'], form: 'https://forms.gle/zG9Cd492HVgBApfT6' }
+             ],
+             'higher-secondary': [
+                 { title: 'Wall Magazine', fee: '300tk', deadline: '25 August', description: 'Express creativity and awareness about environmental issues in a team.', rules: ['Team of 3 members', 'Theme: "Beat Plastic Pollution"', 'Size: 5ft x 4ft', 'Use eco-friendly materials'], form: 'https://forms.gle/737ZQccyiYuqinX29' },
+                 { title: 'Olympiad', fee: '100tk', deadline: '22 August', description: 'Test your understanding of environmental science, sustainability, and plastic pollution.', rules: ['Individual participation', '20 MCQ & short-answer questions', 'Duration: 30 minutes', 'No devices or reference materials allowed'], form: 'https://forms.gle/nMxmz6DhVxYc1Ey76' },
+                 { title: 'Project Display', fee: '300tk', deadline: '25 August', description: 'Showcase environmental innovations with the theme "Recycle to Restore".', rules: ['Team of 3 members', 'Project must use recycled materials', 'Models must be prepared beforehand'], form: 'https://forms.gle/UYwnVBzqo9pPkgfo9' },
+                 { title: 'Eco Voice (Extempore Speech)', fee: '100tk', deadline: '22 August', description: 'Ignite awareness and drive action with your words.', rules: ['Individual participation', 'Random topic given on the spot', 'Prep time: 1 min, Speaking time: 2 mins', 'Language: English or Bengali', 'No notes allowed'], form: 'https://forms.gle/qZKuPXAdUuWKCYyj7' },
+                 { title: 'Eco Lens (Photography)', fee: 'Reg: 100tk | Exb: 300tk', deadline: '22 August', description: 'Tell a powerful environmental story through a single photograph.', rules: ['Individual submission, one photo only', 'Mobile or camera allowed', 'Basic editing permitted, no AI', 'Include title and caption (max 50 words)'], form: 'https://forms.gle/sZTtk55AdZh9mZcD9' },
+                 { title: 'Recycle Relay', fee: '200tk', deadline: '25 August', description: 'A high-energy race combining speed with waste management principles.', rules: ['Team of 2 members', 'Identify and sort plastic, paper, metal, e-waste', 'Judged on accuracy and speed'], form: 'https://forms.gle/zG9Cd492HVgBApfT6' },
+                 { title: 'Cinegreen (Short Film)', fee: '200tk', deadline: '22 August', description: 'Craft a compelling cinematic story to inspire action against plastic pollution.', rules: ['Individual or Team of 2', 'Theme: "Beat Plastic Pollution"', 'Duration: 2-5 minutes', 'Two rounds: Online submission & public interaction'], form: 'https://forms.gle/gxsargTYkoRuY2WBA' },
+                 { title: 'Case Study', fee: '300tk', deadline: '22 August', description: 'Step into the shoes of policy makers and propose solutions to real-world problems.', rules: ['Team of 3 members', 'No plagiarism or AI', 'Two rounds: Online submission & on-spot finale', 'Finale: 7 min presentation, 3 min Q&A'], form: 'https://forms.gle/acYtHqVeikzH2gy28' }
+             ]
+         };
 
         // --- Tabs & Accordions ---
         const tabsContainer = document.querySelector('.tabs-container');
@@ -660,18 +697,19 @@
             const categoryName = key.replace('-', ' ').replace(/\b\w/g, l => l.toUpperCase());
             tabsHTML += `<button class="tab-btn px-4 py-2 text-sm font-semibold rounded-full transition-colors duration-300 ${index === 0 ? 'active bg-emerald-600 text-white' : 'text-slate-600 hover:bg-slate-200'}" data-tab="${key}">${categoryName}</button>`;
 
-            let accordionHTML = '';
-            segmentData[key].forEach((segment) => {
-                const rulesHTML = (segment.rules || []).map(rule => `<li>${rule}</li>`).join('');
-                const feeHTML = segment.fee ? `<p><span class="font-bold text-emerald-800 bg-emerald-100 px-2 py-1 rounded-md">Registration Fee: ${segment.fee}</span></p>` : '';
-                const submissionHTML = segment.submission ? `<div><h4 class="font-bold text-slate-800 mb-2">Submission:</h4><p>${segment.submission}</p></div>` : '';
-                const actionHTML = segment.form
-                    ? `<div class="pt-4">
-                            <a href="${segment.form}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center h-9 px-5 text-sm font-medium tracking-wide text-white transition duration-200 rounded-full shadow-sm bg-emerald-500 hover:bg-emerald-600 focus:shadow-outline focus:outline-none">
-                                Register for ${segment.title}
-                            </a>
-                       </div>`
-                    : (segment.noFormNote ? `<p class="pt-2 text-sm italic text-slate-500">${segment.noFormNote}</p>` : '');
+                         let accordionHTML = '';
+             segmentData[key].forEach((segment) => {
+                 const rulesHTML = (segment.rules || []).map(rule => `<li>${rule}</li>`).join('');
+                 const feeHTML = segment.fee ? `<p><span class="font-bold text-emerald-800 bg-emerald-100 px-2 py-1 rounded-md">Registration Fee: ${segment.fee}</span></p>` : '';
+                 const deadlineHTML = segment.deadline ? `<p><span class="font-bold text-red-700 bg-red-100 px-2 py-1 rounded-md">Registration Deadline: ${segment.deadline}</span></p>` : '';
+                                   const submissionHTML = '';
+                 const actionHTML = segment.form
+                     ? `<div class="pt-4">
+                             <a href="${segment.form}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center h-9 px-5 text-sm font-medium tracking-wide text-white transition duration-200 rounded-full shadow-sm bg-emerald-500 hover:bg-emerald-600 focus:shadow-outline focus:outline-none">
+                                 Register for ${segment.title}
+                             </a>
+                        </div>`
+                     : (segment.noFormNote ? `<p class="pt-2 text-sm italic text-slate-500">${segment.noFormNote}</p>` : '');
 
                 accordionHTML += `
                     <div class="accordion-item bg-white border border-slate-200 rounded-lg mb-3">
@@ -680,13 +718,14 @@
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6 text-slate-500"><polyline points="6 9 12 15 18 9"></polyline></svg>
                         </button>
                         <div class="accordion-content overflow-hidden max-h-0 transition-all duration-500 ease-in-out">
-                            <div class="p-5 border-t border-slate-200 text-slate-600 space-y-4">
-                                <p>${segment.description || ''}</p>
-                                ${feeHTML}
-                                <div><h4 class="font-bold text-slate-800 mb-2">Rules:</h4><ul class="list-disc list-inside space-y-1">${rulesHTML}</ul></div>
-                                ${submissionHTML}
-                                ${actionHTML}
-                            </div>
+                                                         <div class="p-5 border-t border-slate-200 text-slate-600 space-y-4">
+                                 <p>${segment.description || ''}</p>
+                                 ${feeHTML}
+                                 ${deadlineHTML}
+                                 <div><h4 class="font-bold text-slate-800 mb-2">Rules:</h4><ul class="list-disc list-inside space-y-1">${rulesHTML}</ul></div>
+                                 ${submissionHTML}
+                                 ${actionHTML}
+                             </div>
                         </div>
                     </div>`;
             });
@@ -717,16 +756,123 @@
             content.style.maxHeight = isActive ? '0px' : content.scrollHeight + 'px';
         });
 
-        // Scroll animation
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('is-visible');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.1 });
-        document.querySelectorAll('.observe').forEach(el => observer.observe(el));
-    </script>
+                 // Scroll animation
+         const observer = new IntersectionObserver((entries) => {
+             entries.forEach(entry => {
+                 if (entry.isIntersecting) {
+                     entry.target.classList.add('is-visible');
+                     observer.unobserve(entry.target);
+                 }
+             });
+         }, { threshold: 0.1 });
+         document.querySelectorAll('.observe').forEach(el => observer.observe(el));
+
+         // Partners carousel functionality
+         (function partnersSlider() {
+             const root = document.querySelector('#partners-carousel');
+             if (!root) return;
+
+             const track = root.querySelector('[data-track]');
+             const slides = Array.from(track.children);
+             const prevBtn = root.querySelector('[data-prev]');
+             const nextBtn = root.querySelector('[data-next]');
+
+             if (!track || !slides.length || !prevBtn || !nextBtn) return;
+
+             // Create a proper infinite loop by duplicating slides
+             for (let i = 0; i < 3; i++) {
+                 slides.forEach(node => track.appendChild(node.cloneNode(true)));
+             }
+
+             let index = 0;
+             let auto = null;
+             const GAP = 32;              // matches gap-8 (8*4px)
+             const STEP = 1;              // move 1 partner at a time
+             const INTERVAL = 3000;       // 3 seconds interval
+             const ORIGINAL_COUNT = slides.length; // 5 original partners
+
+             function itemWidth() {
+                 // approximate item width including gap
+                 return slides[0].offsetWidth + GAP;
+             }
+
+             function moveToIndex(newIndex) {
+                 index = newIndex;
+                 const offset = -index * itemWidth();
+                 track.style.transform = `translateX(${offset}px)`;
+             }
+
+             function next() {
+                 index += STEP;
+                 if (index >= ORIGINAL_COUNT) {
+                     // Reset to beginning for seamless loop
+                     setTimeout(() => {
+                         track.style.transition = 'none';
+                         index = 0;
+                         moveToIndex(index);
+                         setTimeout(() => {
+                             track.style.transition = 'transform 700ms ease-out';
+                         }, 50);
+                     }, 700);
+                 } else {
+                     moveToIndex(index);
+                 }
+             }
+
+             function prev() {
+                 index -= STEP;
+                 if (index < 0) {
+                     // Jump to end for seamless loop
+                     setTimeout(() => {
+                         track.style.transition = 'none';
+                         index = ORIGINAL_COUNT - 1;
+                         moveToIndex(index);
+                         setTimeout(() => {
+                             track.style.transition = 'transform 700ms ease-out';
+                         }, 50);
+                     }, 700);
+                 } else {
+                     moveToIndex(index);
+                 }
+             }
+
+             function startAuto() {
+                 if (auto) clearInterval(auto);
+                 auto = setInterval(next, INTERVAL);
+             }
+
+             function stopAuto() {
+                 if (auto) {
+                     clearInterval(auto);
+                     auto = null;
+                 }
+             }
+
+             // Event listeners
+             prevBtn.addEventListener('click', () => {
+                 prev();
+                 stopAuto();
+                 startAuto();
+             });
+
+             nextBtn.addEventListener('click', () => {
+                 next();
+                 stopAuto();
+                 startAuto();
+             });
+
+             // Pause on hover
+             root.addEventListener('mouseenter', stopAuto);
+             root.addEventListener('mouseleave', startAuto);
+
+             // Start autoplay
+             startAuto();
+
+             // Handle window resize
+             window.addEventListener('resize', () => {
+                 moveToIndex(index);
+             });
+         })();
+     </script>
 </body>
 </html>
