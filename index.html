@@ -77,6 +77,95 @@
             </div>
         </section>
 
+<!-- Countdown -->
+<div id="countdown" class="mt-10">
+  <div class="text-center">
+    <p id="countdown-label" 
+   class="text-xl sm:text-2xl font-extrabold bg-gradient-to-r from-emerald-400 via-cyan-400 to-emerald-500 bg-clip-text text-transparent drop-shadow-md tracking-widest uppercase mb-6">
+   Event Starts In
+</p>
+
+  <div class="grid grid-cols-4 gap-4 max-w-2xl mx-auto">
+    <div class="p-4 rounded-2xl text-center text-white bg-gradient-to-br from-emerald-500 via-emerald-600 to-emerald-700 shadow-lg">
+      <div id="cd-days" class="text-4xl sm:text-5xl font-extrabold">00</div>
+      <div class="text-xs uppercase tracking-widest mt-1 opacity-90">Days</div>
+    </div>
+    <div class="p-4 rounded-2xl text-center text-white bg-gradient-to-br from-cyan-500 via-cyan-600 to-cyan-700 shadow-lg">
+      <div id="cd-hours" class="text-4xl sm:text-5xl font-extrabold">00</div>
+      <div class="text-xs uppercase tracking-widest mt-1 opacity-90">Hours</div>
+    </div>
+    <div class="p-4 rounded-2xl text-center text-white bg-gradient-to-br from-indigo-500 via-indigo-600 to-indigo-700 shadow-lg">
+      <div id="cd-mins" class="text-4xl sm:text-5xl font-extrabold">00</div>
+      <div class="text-xs uppercase tracking-widest mt-1 opacity-90">Mins</div>
+    </div>
+    <div class="p-4 rounded-2xl text-center text-white bg-gradient-to-br from-pink-500 via-pink-600 to-pink-700 shadow-lg">
+      <div id="cd-secs" class="text-4xl sm:text-5xl font-extrabold">00</div>
+      <div class="text-xs uppercase tracking-widest mt-1 opacity-90">Secs</div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Multi-day countdown for Sept 4, 5, 6 (local browser time)
+  (function multiDayCountdown() {
+    const labelEl = document.getElementById('countdown-label');
+    const dEl = document.getElementById('cd-days');
+    const hEl = document.getElementById('cd-hours');
+    const mEl = document.getElementById('cd-mins');
+    const sEl = document.getElementById('cd-secs');
+    if (!labelEl || !dEl || !hEl || !mEl || !sEl) return;
+
+    // Milestones (00:00 local time). Adjust to specific times if needed.
+    const milestones = [
+      { label: 'Event starts in',      at: new Date(2025, 8,  4, 0, 0, 0) }, // Sept is month 8 (0-indexed)
+      { label: 'Day 2 begins in',      at: new Date(2025, 8,  5, 0, 0, 0) },
+      { label: 'Day 3 begins in',      at: new Date(2025, 8,  6, 0, 0, 0) },
+      { label: 'Event ends in',        at: new Date(2025, 8,  7, 0, 0, 0) }
+    ];
+
+    function pad(n) { return String(n).padStart(2, '0'); }
+
+    function getNextMilestone(now) {
+      for (const m of milestones) {
+        if (now < m.at) return m;
+      }
+      return null; // past all milestones
+    }
+
+    function renderDiff(ms) {
+      const totalSeconds = Math.max(0, Math.floor(ms / 1000));
+      const days = Math.floor(totalSeconds / (24*3600));
+      const hours = Math.floor((totalSeconds % (24*3600)) / 3600);
+      const mins = Math.floor((totalSeconds % 3600) / 60);
+      const secs = totalSeconds % 60;
+      dEl.textContent = pad(days);
+      hEl.textContent = pad(hours);
+      mEl.textContent = pad(mins);
+      sEl.textContent = pad(secs);
+    }
+
+    function tick() {
+      const now = new Date();
+      const next = getNextMilestone(now);
+
+      if (!next) {
+        labelEl.textContent = 'Event has ended';
+        renderDiff(0);
+        return; // stop updating after end if you want; else keep at 0
+      }
+
+      labelEl.textContent = next.label;
+      const diff = next.at - now;
+      renderDiff(diff);
+    }
+
+    tick();
+    const iv = setInterval(tick, 1000);
+    // Optional: stop after event ends
+    setTimeout(() => { clearInterval(iv); }, milestones.at(-1).at - new Date() + 5000);
+  })();
+</script>
+
         <!-- About -->
         <section id="about" class="py-24 bg-white">
             <div class="container mx-auto px-4">
