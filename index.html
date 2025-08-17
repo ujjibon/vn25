@@ -179,6 +179,151 @@
             </div>
         </section>
 
+
+        <!-- Partners (Slideshow) -->
+<section id="partners" class="py-24 bg-slate-50">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-8 observe">
+      <h2 class="text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight">Partners of 4NEF</h2>
+      <p class="text-slate-600 mt-2">Swipe or use arrows; auto-plays and loops.</p>
+    </div>
+
+    <div class="relative observe" id="partners-carousel">
+      <!-- gradient masks (left/right) -->
+      <div class="pointer-events-none absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-slate-50 to-transparent rounded-l-2xl"></div>
+      <div class="pointer-events-none absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-slate-50 to-transparent rounded-r-2xl"></div>
+
+      <!-- viewport -->
+      <div class="overflow-hidden rounded-2xl border border-slate-200">
+        <!-- track -->
+        <div class="flex items-center gap-8 px-6 py-8 will-change-transform transition-transform duration-500 ease-out"
+             data-track>
+          <!-- slides (use your real logos later) -->
+          <img class="h-16 sm:h-18 md:h-20 object-contain mx-auto grayscale hover:grayscale-0 transition" src="https://placehold.co/240x120?text=Partner+1" alt="Partner 1">
+          <img class="h-16 sm:h-18 md:h-20 object-contain mx-auto grayscale hover:grayscale-0 transition" src="https://placehold.co/240x120?text=Partner+2" alt="Partner 2">
+          <img class="h-16 sm:h-18 md:h-20 object-contain mx-auto grayscale hover:grayscale-0 transition" src="https://placehold.co/240x120?text=Partner+3" alt="Partner 3">
+          <img class="h-16 sm:h-18 md:h-20 object-contain mx-auto grayscale hover:grayscale-0 transition" src="https://placehold.co/240x120?text=Partner+4" alt="Partner 4">
+          <img class="h-16 sm:h-18 md:h-20 object-contain mx-auto grayscale hover:grayscale-0 transition" src="https://placehold.co/240x120?text=Partner+5" alt="Partner 5">
+          <img class="h-16 sm:h-18 md:h-20 object-contain mx-auto grayscale hover:grayscale-0 transition" src="https://placehold.co/240x120?text=Partner+6" alt="Partner 6">
+        </div>
+      </div>
+
+      <!-- controls -->
+      <button type="button" class="absolute left-2 top-1/2 -translate-y-1/2 grid place-items-center h-10 w-10 rounded-full bg-white/90 border border-slate-200 shadow hover:bg-white"
+              aria-label="Previous" data-prev>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-slate-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m15 19-7-7 7-7"/>
+        </svg>
+      </button>
+      <button type="button" class="absolute right-2 top-1/2 -translate-y-1/2 grid place-items-center h-10 w-10 rounded-full bg-white/90 border border-slate-200 shadow hover:bg-white"
+              aria-label="Next" data-next>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-slate-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Partners carousel (autoplay, loop, pause on hover, buttons)
+  (function partnersSlider(){
+    const root = document.querySelector('#partners-carousel');
+    if (!root) return;
+
+    const track = root.querySelector('[data-track]');
+    const slides = Array.from(track.children);
+
+    // Duplicate slides to enable seamless looping
+    slides.forEach(node => track.appendChild(node.cloneNode(true)));
+
+    let index = 0;
+    let auto = null;
+    const GAP = 32;              // matches gap-8 (8*4px)
+    const STEP = 3;              // how many logos to move per advance
+    const INTERVAL = 2500;
+
+    function itemWidth(){
+      // approximate item width including gap
+      const first = track.children[0];
+      if (!first) return 0;
+      const rect = first.getBoundingClientRect();
+      return rect.width + GAP;
+    }
+
+    function moveNext(step = STEP){
+      index += step;
+      const count = track.children.length;
+      const w = itemWidth();
+      const total = w * count;
+
+      // translate
+      track.style.transition = 'transform 500ms ease-out';
+      track.style.transform = `translateX(${-index * w}px)`;
+
+      // after transition: wrap index (seamless)
+      setTimeout(() => {
+        const half = count / 2; // because we duplicated once
+        if (index >= half) {
+          index = index % half;
+          track.style.transition = 'none';
+          track.style.transform = `translateX(${-index * w}px)`;
+        }
+      }, 520);
+    }
+
+    function movePrev(step = STEP){
+      const count = track.children.length;
+      const half = count / 2;
+      const w = itemWidth();
+
+      index -= step;
+      if (index < 0) {
+        index = (index % half + half) % half; // wrap backward into first half
+        track.style.transition = 'none';
+        track.style.transform = `translateX(${-index * w}px)`;
+      }
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          track.style.transition = 'transform 500ms ease-out';
+          track.style.transform = `translateX(${-index * w}px)`;
+        });
+      });
+    }
+
+    // Buttons
+    root.querySelector('[data-next]').addEventListener('click', () => moveNext(1));
+    root.querySelector('[data-prev]').addEventListener('click', () => movePrev(1));
+
+    // Autoplay
+    function start(){ stop(); auto = setInterval(moveNext, INTERVAL); }
+    function stop(){ if (auto) clearInterval(auto); auto = null; }
+
+    // Pause on hover / focus within
+    root.addEventListener('mouseenter', stop);
+    root.addEventListener('mouseleave', start);
+    root.addEventListener('focusin', stop);
+    root.addEventListener('focusout', start);
+
+    // Resize handling to keep alignment crisp
+    let resizeTimer;
+    window.addEventListener('resize', () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(() => {
+        track.style.transition = 'none';
+        const w = itemWidth();
+        track.style.transform = `translateX(${-index * w}px)`;
+      }, 100);
+    });
+
+    // Respect reduced motion
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    // Kick off
+    start();
+  })();
+</script>
+
 <!-- Gallery -->
 <section id="gallery" class="py-24 bg-white">
   <div class="container mx-auto px-4">
