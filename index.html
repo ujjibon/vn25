@@ -629,6 +629,93 @@
         </div>
     </footer>
 
+    <!-- Cognisor AI Notification Popup -->
+    <div id="cognisor-notification" class="fixed bottom-6 right-6 max-w-md w-80 bg-gradient-to-br from-emerald-600 via-green-600 to-teal-600 text-white rounded-2xl shadow-2xl border-2 border-white/20 z-50 transform translate-x-full opacity-0 transition-all duration-700 ease-out backdrop-blur-sm">
+        <div class="relative overflow-hidden">
+            <!-- Animated background gradient -->
+            <div class="absolute inset-0 bg-gradient-to-r from-emerald-400/20 via-green-400/20 to-teal-400/20 animate-pulse"></div>
+            
+            <!-- Sparkle effects -->
+            <div class="absolute top-2 left-4 w-2 h-2 bg-yellow-300 rounded-full animate-ping"></div>
+            <div class="absolute top-6 right-8 w-1 h-1 bg-white rounded-full animate-pulse"></div>
+            <div class="absolute bottom-4 left-6 w-1.5 h-1.5 bg-lime-300 rounded-full animate-bounce"></div>
+            
+            <!-- Close button -->
+            <button id="close-notification" class="absolute top-3 right-3 w-8 h-8 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center transition-all duration-200 z-10 backdrop-blur-sm">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            
+            <!-- Content -->
+            <div class="relative p-6 pr-14">
+                <!-- Header with preview mockup -->
+                <div class="flex items-start gap-3 mb-4">
+                    <div class="relative">
+                        <!-- Mini preview mockup -->
+                        <div class="w-14 h-10 bg-white rounded-md shadow-lg overflow-hidden border border-gray-200">
+                            <div class="h-2.5 bg-gradient-to-r from-emerald-500 to-green-500"></div>
+                            <div class="p-1 space-y-0.5">
+                                <div class="h-0.5 bg-gray-300 rounded w-full"></div>
+                                <div class="h-0.5 bg-gray-200 rounded w-3/4"></div>
+                                <div class="h-0.5 bg-gray-200 rounded w-1/2"></div>
+                            </div>
+                        </div>
+                        <!-- Floating elements around mockup -->
+                        <div class="absolute -top-1 -right-1 w-3 h-3 bg-lime-400 rounded-full animate-bounce"></div>
+                        <div class="absolute -bottom-1 -left-1 w-2 h-2 bg-yellow-400 rounded-full animate-pulse"></div>
+                    </div>
+                    <div class="flex-1">
+                        <h4 class="font-bold text-xl bg-gradient-to-r from-white to-green-200 bg-clip-text text-transparent">Need a Website?</h4>
+                        <p class="text-sm text-green-100 font-medium">Cognisor AI Solutions</p>
+                    </div>
+                </div>
+                
+                <!-- Services showcase -->
+                <div class="mb-4">
+                    <p class="text-sm mb-3 leading-relaxed text-white/90">
+                        Professional websites for:
+                    </p>
+                    <div class="grid grid-cols-2 gap-3 text-sm">
+                        <div class="bg-white/15 rounded-lg p-3 backdrop-blur-sm border border-white/20">
+                            <span class="text-lime-200">Events</span>
+                        </div>
+                        <div class="bg-white/15 rounded-lg p-3 backdrop-blur-sm border border-white/20">
+                            <span class="text-emerald-200">Portfolios</span>
+                        </div>
+                        <div class="bg-white/15 rounded-lg p-3 backdrop-blur-sm border border-white/20">
+                            <span class="text-green-200">Business</span>
+                        </div>
+                        <div class="bg-white/15 rounded-lg p-3 backdrop-blur-sm border border-white/20">
+                            <span class="text-teal-200">Startups</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- CTA Button -->
+                <a href="https://cognisorai.com" target="_blank" rel="noopener noreferrer" 
+                   class="relative inline-flex items-center justify-center w-full px-5 py-4 bg-gradient-to-r from-white via-green-50 to-white text-transparent bg-clip-text font-bold rounded-xl hover:from-green-50 hover:to-emerald-50 transition-all duration-300 transform hover:scale-105 shadow-lg overflow-hidden group">
+                    <!-- Button background -->
+                    <div class="absolute inset-0 bg-gradient-to-r from-white via-green-50 to-white opacity-100"></div>
+                    <span class="relative text-green-700 font-bold text-lg">Visit cognisorai.com</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-2 relative text-green-600 group-hover:translate-x-1 transition-transform">
+                        <path d="M7 17l9.2-9.2M17 17V7H7"/>
+                    </svg>
+                    <!-- Shine effect -->
+                    <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent transform -skew-x-12 translate-x-full group-hover:translate-x-[-200%] transition-transform duration-1000"></div>
+                </a>
+            </div>
+            
+            <!-- Animated corner badge -->
+            <div class="absolute -top-2 -right-2 w-7 h-7 bg-gradient-to-r from-lime-500 to-green-500 rounded-full animate-pulse shadow-lg flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+            </div>
+        </div>
+    </div>
+
     <style>
   /* Gallery card load-in animation */
   .gallery-card {
@@ -659,6 +746,39 @@
   .group:hover .gallery-card {
     transform: translateY(-4px) scale(1.03) rotate(0.25deg);
     box-shadow: 0 12px 28px rgba(0,0,0,.15);
+  }
+
+  /* Custom animations for notification */
+  @keyframes tada {
+    0% { transform: scale(1) rotate(0deg); }
+    10%, 20% { transform: scale(0.9) rotate(-3deg); }
+    30%, 50%, 70%, 90% { transform: scale(1.1) rotate(3deg); }
+    40%, 60%, 80% { transform: scale(1.1) rotate(-3deg); }
+    100% { transform: scale(1) rotate(0deg); }
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-10px) rotate(1deg); }
+  }
+
+  @keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+  }
+
+  /* Enhanced notification styles */
+  #cognisor-notification {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25), 
+                0 0 0 1px rgba(255, 255, 255, 0.1),
+                0 0 20px rgba(16, 185, 129, 0.4);
+  }
+
+  #cognisor-notification:hover {
+    transform: scale(1.05) !important;
+    box-shadow: 0 35px 60px -12px rgba(0, 0, 0, 0.35), 
+                0 0 0 1px rgba(255, 255, 255, 0.2),
+                0 0 30px rgba(16, 185, 129, 0.6);
   }
 </style>
 
@@ -930,6 +1050,75 @@
              // Handle window resize
              window.addEventListener('resize', () => {
                  moveToIndex(index);
+             });
+         })();
+
+         // --- Cognisor AI Notification Popup ---
+         (function cognisorNotification() {
+             const notification = document.getElementById('cognisor-notification');
+             const closeBtn = document.getElementById('close-notification');
+             
+             if (!notification || !closeBtn) return;
+
+             let hasShown = false;
+
+             // Show notification after 10 seconds
+             setTimeout(() => {
+                 if (!hasShown && !localStorage.getItem('cognisor-notification-closed')) {
+                     showNotification();
+                     hasShown = true;
+                 }
+             }, 10000);
+
+             function showNotification() {
+                 notification.classList.remove('translate-x-full', 'opacity-0');
+                 notification.classList.add('translate-x-0', 'opacity-100');
+                 
+                 // Add dramatic entrance effect
+                 setTimeout(() => {
+                     notification.style.animation = 'tada 1s ease-in-out';
+                     setTimeout(() => {
+                         notification.style.animation = '';
+                     }, 1000);
+                 }, 300);
+
+                 // Add floating effect
+                 setTimeout(() => {
+                     notification.style.animation = 'float 3s ease-in-out infinite';
+                 }, 1500);
+
+                 // Auto-hide after 12 seconds if not interacted with
+                 setTimeout(() => {
+                     if (notification.classList.contains('opacity-100')) {
+                         hideNotification();
+                     }
+                 }, 12000);
+             }
+
+             function hideNotification() {
+                 notification.classList.remove('translate-x-0', 'opacity-100');
+                 notification.classList.add('translate-x-full', 'opacity-0');
+             }
+
+             // Close button functionality
+             closeBtn.addEventListener('click', () => {
+                 hideNotification();
+                 // Remember that user closed it (for this session)
+                 localStorage.setItem('cognisor-notification-closed', 'true');
+             });
+
+             // Show on hover over the whole notification for better interaction
+             notification.addEventListener('mouseenter', () => {
+                 notification.style.transform = 'scale(1.02)';
+             });
+
+             notification.addEventListener('mouseleave', () => {
+                 notification.style.transform = 'scale(1)';
+             });
+
+             // Clear localStorage on page reload (so notification can show again on fresh visits)
+             window.addEventListener('beforeunload', () => {
+                 localStorage.removeItem('cognisor-notification-closed');
              });
          })();
      </script>
